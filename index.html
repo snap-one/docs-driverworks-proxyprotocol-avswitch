@@ -1,0 +1,4260 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Driverworks Reference</title>
+
+    <style media="screen">
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .ch, .highlight .cd, .highlight .cpf {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s, .highlight .sa, .highlight .dl {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf, .highlight .fm {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv, .highlight .vm {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #f92672;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <style media="print">
+      * {
+        -webkit-transition:none!important;
+        transition:none!important;
+      }
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight, .highlight .w {
+  color: #586e75;
+}
+.highlight .err {
+  color: #002b36;
+  background-color: #dc322f;
+}
+.highlight .c, .highlight .ch, .highlight .cd, .highlight .cm, .highlight .cpf, .highlight .c1, .highlight .cs {
+  color: #657b83;
+}
+.highlight .cp {
+  color: #b58900;
+}
+.highlight .nt {
+  color: #b58900;
+}
+.highlight .o, .highlight .ow {
+  color: #93a1a1;
+}
+.highlight .p, .highlight .pi {
+  color: #93a1a1;
+}
+.highlight .gi {
+  color: #859900;
+}
+.highlight .gd {
+  color: #dc322f;
+}
+.highlight .gh {
+  color: #268bd2;
+  background-color: #002b36;
+  font-weight: bold;
+}
+.highlight .k, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kv {
+  color: #6c71c4;
+}
+.highlight .kc {
+  color: #cb4b16;
+}
+.highlight .kt {
+  color: #cb4b16;
+}
+.highlight .kd {
+  color: #cb4b16;
+}
+.highlight .s, .highlight .sb, .highlight .sc, .highlight .dl, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .sx, .highlight .s1 {
+  color: #859900;
+}
+.highlight .sa {
+  color: #6c71c4;
+}
+.highlight .sr {
+  color: #2aa198;
+}
+.highlight .si {
+  color: #d33682;
+}
+.highlight .se {
+  color: #d33682;
+}
+.highlight .nn {
+  color: #b58900;
+}
+.highlight .nc {
+  color: #b58900;
+}
+.highlight .no {
+  color: #b58900;
+}
+.highlight .na {
+  color: #268bd2;
+}
+.highlight .m, .highlight .mb, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .il, .highlight .mo, .highlight .mx {
+  color: #859900;
+}
+.highlight .ss {
+  color: #859900;
+}
+    </style>
+    <link href="stylesheets/screen-9c19b03a.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print-966d6edc.css" rel="stylesheet" media="print" />
+      <script src="javascripts/all-b12a2749.js"></script>
+
+  </head>
+
+  <body class="index" data-languages="[&quot;lua&quot;]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar-cad8cdcb.png" alt="" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+      <img src="images/logo-3056e635.png" class="logo" alt="" />
+        <div class="lang-selector">
+              <a href="#" data-language-name="lua">lua</a>
+        </div>
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <ul id="toc" class="toc-list-h1">
+          <li>
+            <a href="#license-copyright-and-trademark" class="toc-h1 toc-link" data-title="License, Copyright, and Trademark">License, Copyright, and Trademark</a>
+          </li>
+          <li>
+            <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#introduction-proxies-commands" class="toc-h2 toc-link" data-title="Proxies (Commands)">Proxies (Commands)</a>
+                  </li>
+                  <li>
+                    <a href="#introduction-protocol-notifications" class="toc-h2 toc-link" data-title="Protocol (Notifications)">Protocol (Notifications)</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#what-s-new" class="toc-h1 toc-link" data-title="What’s New">What’s New</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#what-s-new-what-s-new-in-3-4-1" class="toc-h2 toc-link" data-title="What’s New in 3.4.1">What’s New in 3.4.1</a>
+                  </li>
+                  <li>
+                    <a href="#what-s-new-what-s-new-in-3-4-0" class="toc-h2 toc-link" data-title="What’s New in 3.4.0">What’s New in 3.4.0</a>
+                  </li>
+                  <li>
+                    <a href="#what-s-new-what-s-new-in-3-3-2" class="toc-h2 toc-link" data-title="What’s New in 3.3.2">What’s New in 3.3.2</a>
+                  </li>
+                  <li>
+                    <a href="#what-s-new-what-s-new-in-3-3-1" class="toc-h2 toc-link" data-title="What’s New in 3.3.1">What’s New in 3.3.1</a>
+                  </li>
+                  <li>
+                    <a href="#what-s-new-what-s-new-in-3-3-0" class="toc-h2 toc-link" data-title="What’s New in 3.3.0">What’s New in 3.3.0</a>
+                  </li>
+                  <li>
+                    <a href="#what-s-new-what-s-new-in-3-2-3" class="toc-h2 toc-link" data-title="What’s New in 3.2.3">What’s New in 3.2.3</a>
+                  </li>
+                  <li>
+                    <a href="#what-s-new-what-s-new-in-3-2-2" class="toc-h2 toc-link" data-title="What’s New in 3.2.2">What’s New in 3.2.2</a>
+                  </li>
+                  <li>
+                    <a href="#what-s-new-what-s-new-in-3-2-1" class="toc-h2 toc-link" data-title="What’s New in 3.2.1">What’s New in 3.2.1</a>
+                  </li>
+                  <li>
+                    <a href="#what-s-new-what-s-new-in-3-2-0" class="toc-h2 toc-link" data-title="What’s New in 3.2.0">What’s New in 3.2.0</a>
+                  </li>
+                  <li>
+                    <a href="#what-s-new-what-was-new-in-3-1-2" class="toc-h2 toc-link" data-title="What was New in 3.1.2">What was New in 3.1.2</a>
+                  </li>
+                  <li>
+                    <a href="#what-s-new-what-was-new-in-3-1-0" class="toc-h2 toc-link" data-title="What was New in 3.1.0">What was New in 3.1.0</a>
+                  </li>
+                  <li>
+                    <a href="#what-s-new-what-was-new-in-o-s-3" class="toc-h2 toc-link" data-title="What was New in O.S.3">What was New in O.S.3</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#audio-video-switch-capabilities" class="toc-h1 toc-link" data-title="Audio Video Switch Capabilities">Audio Video Switch Capabilities</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#audio-video-switch-capabilities-audio_consumer_count" class="toc-h2 toc-link" data-title="audio_consumer_count">audio_consumer_count</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-capabilities-audio_provider_count" class="toc-h2 toc-link" data-title="audio_provider_count">audio_provider_count</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-capabilities-can_-downclass" class="toc-h2 toc-link" data-title="can_ downclass">can_ downclass</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-capabilities-can_switch_separately" class="toc-h2 toc-link" data-title="can_switch_separately">can_switch_separately</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-capabilities-can_upclass" class="toc-h2 toc-link" data-title="can_upclass">can_upclass</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-capabilities-has_audio_signal_sense" class="toc-h2 toc-link" data-title="has_audio_signal_sense">has_audio_signal_sense</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-capabilities-has_-discrete_balance_control" class="toc-h2 toc-link" data-title="has_ discrete_balance_control">has_ discrete_balance_control</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-capabilities-has_discrete_bass_control" class="toc-h2 toc-link" data-title="has_discrete_bass_control">has_discrete_bass_control</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-capabilities-has_discrete_loudness_control" class="toc-h2 toc-link" data-title="has_discrete_loudness_control">has_discrete_loudness_control</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-capabilities-has_discrete_mute_control" class="toc-h2 toc-link" data-title="has_discrete_mute_control">has_discrete_mute_control</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-capabilities-has_discrete_treble_control" class="toc-h2 toc-link" data-title="has_discrete_treble_control">has_discrete_treble_control</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-capabilities-has_discrete_volume_control" class="toc-h2 toc-link" data-title="has_discrete_volume_control">has_discrete_volume_control</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-capabilities-has_discrete_loudness_control" class="toc-h2 toc-link" data-title="has_discrete_loudness_control">has_discrete_loudness_control</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-capabilities-has_toggle_mute_control" class="toc-h2 toc-link" data-title="has_toggle_mute_control">has_toggle_mute_control</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-capabilities-has_up_down_balance_control" class="toc-h2 toc-link" data-title="has_up_down_balance_control">has_up_down_balance_control</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-capabilities-has_up_down_bass_control" class="toc-h2 toc-link" data-title="has_up_down_bass_control">has_up_down_bass_control</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-capabilities-has_up_down_treble_control" class="toc-h2 toc-link" data-title="has_up_down_treble_control">has_up_down_treble_control</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-capabilities-has_up_down_volume_control" class="toc-h2 toc-link" data-title="has_up_down_volume_control">has_up_down_volume_control</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-capabilities-has_video_signal_sense" class="toc-h2 toc-link" data-title="has_video_signal_sense">has_video_signal_sense</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-capabilities-requires_-separate_switching" class="toc-h2 toc-link" data-title="requires_ separate_switching">requires_ separate_switching</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-capabilities-video_consumer_count" class="toc-h2 toc-link" data-title="video_consumer_count">video_consumer_count</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-capabilities-video_provider_count" class="toc-h2 toc-link" data-title="video_provider_count">video_provider_count</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#audio-video-switch-protocol-notifications" class="toc-h1 toc-link" data-title="Audio Video Switch Protocol Notifications">Audio Video Switch Protocol Notifications</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#audio-video-switch-protocol-notifications-audio_parameter_changed" class="toc-h2 toc-link" data-title="AUDIO_PARAMETER_CHANGED">AUDIO_PARAMETER_CHANGED</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-protocol-notifications-balance_level_changed" class="toc-h2 toc-link" data-title="BALANCE_LEVEL_CHANGED">BALANCE_LEVEL_CHANGED</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-protocol-notifications-bass_level_changed" class="toc-h2 toc-link" data-title="BASS_LEVEL_CHANGED">BASS_LEVEL_CHANGED</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-protocol-notifications-input_output_changed" class="toc-h2 toc-link" data-title="INPUT_OUTPUT_CHANGED">INPUT_OUTPUT_CHANGED</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-protocol-notifications-loudness_changed" class="toc-h2 toc-link" data-title="LOUDNESS_CHANGED">LOUDNESS_CHANGED</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-protocol-notifications-mute_changed" class="toc-h2 toc-link" data-title="MUTE_CHANGED">MUTE_CHANGED</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-protocol-notifications-off" class="toc-h2 toc-link" data-title="OFF">OFF</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-protocol-notifications-on" class="toc-h2 toc-link" data-title="ON">ON</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-protocol-notifications-treble_level_changed" class="toc-h2 toc-link" data-title="TREBLE_LEVEL_CHANGED">TREBLE_LEVEL_CHANGED</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-protocol-notifications-volume_level_changed" class="toc-h2 toc-link" data-title="VOLUME_LEVEL_CHANGED">VOLUME_LEVEL_CHANGED</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#audio-video-switch-navigator-eq" class="toc-h1 toc-link" data-title="Audio Video Switch Navigator EQ">Audio Video Switch Navigator EQ</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#audio-video-switch-navigator-eq-introduction" class="toc-h2 toc-link" data-title="Introduction">Introduction</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-navigator-eq-navigator-eq-proxy-commands" class="toc-h2 toc-link" data-title="Navigator EQ Proxy Commands">Navigator EQ Proxy Commands</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-navigator-eq-loudness_off" class="toc-h2 toc-link" data-title="LOUDNESS_OFF">LOUDNESS_OFF</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-navigator-eq-loudness_on" class="toc-h2 toc-link" data-title="LOUDNESS_ON">LOUDNESS_ON</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-navigator-eq-set_audiomode_bypass" class="toc-h2 toc-link" data-title="SET_AUDIOMODE_BYPASS">SET_AUDIOMODE_BYPASS</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-navigator-eq-set_audiomode_eq" class="toc-h2 toc-link" data-title="SET_AUDIOMODE_EQ">SET_AUDIOMODE_EQ</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-navigator-eq-set_audiomode_tonecontrol" class="toc-h2 toc-link" data-title="SET_AUDIOMODE_TONECONTROL">SET_AUDIOMODE_TONECONTROL</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-navigator-eq-save_eq_to_custom_preset" class="toc-h2 toc-link" data-title="SAVE_EQ_TO_CUSTOM_PRESET">SAVE_EQ_TO_CUSTOM_PRESET</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-navigator-eq-set_bass_level" class="toc-h2 toc-link" data-title="SET_BASS_LEVEL">SET_BASS_LEVEL</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-navigator-eq-set_eqpreset" class="toc-h2 toc-link" data-title="SET_EQPRESET">SET_EQPRESET</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-navigator-eq-set_eq_gain_values" class="toc-h2 toc-link" data-title="SET_EQ_GAIN_VALUES">SET_EQ_GAIN_VALUES</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-navigator-eq-set_treble_level" class="toc-h2 toc-link" data-title="SET_TREBLE_LEVEL">SET_TREBLE_LEVEL</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-navigator-eq-navigator-eq-protocol-notifications" class="toc-h2 toc-link" data-title="Navigator EQ Protocol Notifications">Navigator EQ Protocol Notifications</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-navigator-eq-audiomode_changed" class="toc-h2 toc-link" data-title="AUDIOMODE_CHANGED">AUDIOMODE_CHANGED</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-navigator-eq-balance_level_changed" class="toc-h2 toc-link" data-title="BALANCE_LEVEL_CHANGED">BALANCE_LEVEL_CHANGED</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-navigator-eq-bass_level_changed" class="toc-h2 toc-link" data-title="BASS_LEVEL_CHANGED">BASS_LEVEL_CHANGED</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-navigator-eq-eq_display_order_changed" class="toc-h2 toc-link" data-title="EQ_DISPLAY_ORDER_CHANGED">EQ_DISPLAY_ORDER_CHANGED</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-navigator-eq-eq_names_changed" class="toc-h2 toc-link" data-title="EQ_NAMES_CHANGED">EQ_NAMES_CHANGED</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-navigator-eq-eq_freqs_changed" class="toc-h2 toc-link" data-title="EQ_FREQS_CHANGED">EQ_FREQS_CHANGED</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-navigator-eq-eq_gains_changed" class="toc-h2 toc-link" data-title="EQ_GAINS_CHANGED">EQ_GAINS_CHANGED</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-navigator-eq-eq_preset_changed" class="toc-h2 toc-link" data-title="EQ_PRESET_CHANGED">EQ_PRESET_CHANGED</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-navigator-eq-hide_eq_from-_navs_changed" class="toc-h2 toc-link" data-title="HIDE_EQ_FROM _NAVS_CHANGED">HIDE_EQ_FROM _NAVS_CHANGED</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-navigator-eq-loudness_changed" class="toc-h2 toc-link" data-title="LOUDNESS_CHANGED">LOUDNESS_CHANGED</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-navigator-eq-treble_level_changed" class="toc-h2 toc-link" data-title="TREBLE_LEVEL_CHANGED">TREBLE_LEVEL_CHANGED</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-navigator-eq-navigator-eq-capabilities" class="toc-h2 toc-link" data-title="Navigator EQ Capabilities">Navigator EQ Capabilities</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#audio-output-bindings-and-proxy-events" class="toc-h1 toc-link" data-title="Audio Output Bindings and Proxy Events">Audio Output Bindings and Proxy Events</a>
+          </li>
+          <li>
+            <a href="#display-adjustable-av-switch-bindings" class="toc-h1 toc-link" data-title="Display Adjustable AV Switch Bindings">Display Adjustable AV Switch Bindings</a>
+          </li>
+          <li>
+            <a href="#audio-video-switch-proxy-commands" class="toc-h1 toc-link" data-title="Audio Video Switch Proxy Commands">Audio Video Switch Proxy Commands</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#audio-video-switch-proxy-commands-back" class="toc-h2 toc-link" data-title="BACK">BACK</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-proxy-commands-cancel" class="toc-h2 toc-link" data-title="CANCEL">CANCEL</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-proxy-commands-connect_output" class="toc-h2 toc-link" data-title="CONNECT_OUTPUT">CONNECT_OUTPUT</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-proxy-commands-dash" class="toc-h2 toc-link" data-title="DASH">DASH</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-proxy-commands-disconnect_output" class="toc-h2 toc-link" data-title="DISCONNECT_OUTPUT">DISCONNECT_OUTPUT</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-proxy-commands-emit_code" class="toc-h2 toc-link" data-title="EMIT_CODE">EMIT_CODE</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-proxy-commands-emit_macro" class="toc-h2 toc-link" data-title="EMIT_MACRO">EMIT_MACRO</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-proxy-commands-get_audio_inputs" class="toc-h2 toc-link" data-title="GET_AUDIO_INPUTS">GET_AUDIO_INPUTS</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-proxy-commands-hyphen" class="toc-h2 toc-link" data-title="HYPHEN">HYPHEN</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-proxy-commands-info" class="toc-h2 toc-link" data-title="INFO">INFO</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-proxy-commands-loudness_off" class="toc-h2 toc-link" data-title="LOUDNESS_OFF">LOUDNESS_OFF</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-proxy-commands-loudness_on" class="toc-h2 toc-link" data-title="LOUDNESS_ON">LOUDNESS_ON</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-proxy-commands-loudness_toggle" class="toc-h2 toc-link" data-title="LOUDNESS_TOGGLE">LOUDNESS_TOGGLE</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-proxy-commands-mute_off" class="toc-h2 toc-link" data-title="MUTE_OFF">MUTE_OFF</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-proxy-commands-mute_on" class="toc-h2 toc-link" data-title="MUTE_ON">MUTE_ON</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-proxy-commands-mute_toggle" class="toc-h2 toc-link" data-title="MUTE_TOGGLE">MUTE_TOGGLE</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-proxy-commands-number_0" class="toc-h2 toc-link" data-title="NUMBER_0">NUMBER_0</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-proxy-commands-number_1" class="toc-h2 toc-link" data-title="NUMBER_1">NUMBER_1</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-proxy-commands-number_2" class="toc-h2 toc-link" data-title="NUMBER_2">NUMBER_2</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-proxy-commands-number_3" class="toc-h2 toc-link" data-title="NUMBER_3">NUMBER_3</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-proxy-commands-number_4" class="toc-h2 toc-link" data-title="NUMBER_4">NUMBER_4</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-proxy-commands-number_5" class="toc-h2 toc-link" data-title="NUMBER_5">NUMBER_5</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-proxy-commands-number_6" class="toc-h2 toc-link" data-title="NUMBER_6">NUMBER_6</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-proxy-commands-number_7" class="toc-h2 toc-link" data-title="NUMBER_7">NUMBER_7</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-proxy-commands-number_8" class="toc-h2 toc-link" data-title="NUMBER_8">NUMBER_8</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-proxy-commands-number_9" class="toc-h2 toc-link" data-title="NUMBER_9">NUMBER_9</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-proxy-commands-off" class="toc-h2 toc-link" data-title="OFF">OFF</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-proxy-commands-on" class="toc-h2 toc-link" data-title="ON">ON</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-proxy-commands-pound" class="toc-h2 toc-link" data-title="POUND">POUND</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-proxy-commands-pulse_balance_down" class="toc-h2 toc-link" data-title="PULSE_BALANCE_DOWN">PULSE_BALANCE_DOWN</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-proxy-commands-pulse_balance_up" class="toc-h2 toc-link" data-title="PULSE_BALANCE_UP">PULSE_BALANCE_UP</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-proxy-commands-pulse_bass_down" class="toc-h2 toc-link" data-title="PULSE_BASS_DOWN">PULSE_BASS_DOWN</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-proxy-commands-pulse_bass_up" class="toc-h2 toc-link" data-title="PULSE_BASS_UP">PULSE_BASS_UP</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-proxy-commands-pulse_input" class="toc-h2 toc-link" data-title="PULSE_INPUT">PULSE_INPUT</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-proxy-commands-pulse_sur_up" class="toc-h2 toc-link" data-title="PULSE_SUR_UP">PULSE_SUR_UP</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-proxy-commands-pulse_vol_down" class="toc-h2 toc-link" data-title="PULSE_VOL_DOWN">PULSE_VOL_DOWN</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-proxy-commands-pulse_vol_up" class="toc-h2 toc-link" data-title="PULSE_VOL_UP">PULSE_VOL_UP</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-proxy-commands-pulse_treble_down" class="toc-h2 toc-link" data-title="PULSE_TREBLE_DOWN">PULSE_TREBLE_DOWN</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-proxy-commands-pulse_treble_up" class="toc-h2 toc-link" data-title="PULSE_TREBLE_UP">PULSE_TREBLE_UP</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-proxy-commands-recall" class="toc-h2 toc-link" data-title="RECALL">RECALL</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-proxy-commands-set_balance" class="toc-h2 toc-link" data-title="SET_BALANCE">SET_BALANCE</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-proxy-commands-set_balance_up" class="toc-h2 toc-link" data-title="SET_BALANCE_UP">SET_BALANCE_UP</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-proxy-commands-set_bass_level" class="toc-h2 toc-link" data-title="SET_BASS_LEVEL">SET_BASS_LEVEL</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-proxy-commands-set_digi_off" class="toc-h2 toc-link" data-title="SET_DIGI_OFF">SET_DIGI_OFF</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-proxy-commands-set_digi_on" class="toc-h2 toc-link" data-title="SET_DIGI_ON">SET_DIGI_ON</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-proxy-commands-set_input" class="toc-h2 toc-link" data-title="SET_INPUT">SET_INPUT</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-proxy-commands-set_loudness" class="toc-h2 toc-link" data-title="SET_LOUDNESS">SET_LOUDNESS</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-proxy-commands-set_output_input" class="toc-h2 toc-link" data-title="SET_OUTPUT_INPUT">SET_OUTPUT_INPUT</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-proxy-commands-set_surround_mode" class="toc-h2 toc-link" data-title="SET_SURROUND_MODE">SET_SURROUND_MODE</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-proxy-commands-set_treble_level" class="toc-h2 toc-link" data-title="SET_TREBLE_LEVEL">SET_TREBLE_LEVEL</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-proxy-commands-set_up_down_swap" class="toc-h2 toc-link" data-title="SET_UP_DOWN_SWAP">SET_UP_DOWN_SWAP</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-proxy-commands-stop_vol_down" class="toc-h2 toc-link" data-title="STOP_VOL_DOWN">STOP_VOL_DOWN</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-proxy-commands-set_volume_level" class="toc-h2 toc-link" data-title="SET_VOLUME_LEVEL">SET_VOLUME_LEVEL</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-proxy-commands-star" class="toc-h2 toc-link" data-title="STAR">STAR</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-proxy-commands-start_balance_down" class="toc-h2 toc-link" data-title="START_BALANCE_DOWN">START_BALANCE_DOWN</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-proxy-commands-start_bass_down" class="toc-h2 toc-link" data-title="START_BASS_DOWN">START_BASS_DOWN</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-proxy-commands-start_bass_up" class="toc-h2 toc-link" data-title="START_BASS_UP">START_BASS_UP</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-proxy-commands-start_treble_down" class="toc-h2 toc-link" data-title="START_TREBLE_DOWN">START_TREBLE_DOWN</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-proxy-commands-start_treble_up" class="toc-h2 toc-link" data-title="START_TREBLE_UP">START_TREBLE_UP</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-proxy-commands-start_vol_down" class="toc-h2 toc-link" data-title="START_VOL_DOWN">START_VOL_DOWN</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-proxy-commands-start_vol_up" class="toc-h2 toc-link" data-title="START_VOL_UP">START_VOL_UP</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-proxy-commands-stop_balance_down" class="toc-h2 toc-link" data-title="STOP_BALANCE_DOWN">STOP_BALANCE_DOWN</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-proxy-commands-stop_bass_down" class="toc-h2 toc-link" data-title="STOP_BASS_DOWN">STOP_BASS_DOWN</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-proxy-commands-stop_bass_down" class="toc-h2 toc-link" data-title="STOP_BASS_DOWN">STOP_BASS_DOWN</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-proxy-commands-stop_bass_up" class="toc-h2 toc-link" data-title="STOP_BASS_UP">STOP_BASS_UP</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-proxy-commands-stop_treble_down" class="toc-h2 toc-link" data-title="STOP_TREBLE_DOWN">STOP_TREBLE_DOWN</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-proxy-commands-stop_treble_up" class="toc-h2 toc-link" data-title="STOP_TREBLE_UP">STOP_TREBLE_UP</a>
+                  </li>
+                  <li>
+                    <a href="#audio-video-switch-proxy-commands-stop_vol_down" class="toc-h2 toc-link" data-title="STOP_VOL_DOWN">STOP_VOL_DOWN</a>
+                  </li>
+              </ul>
+          </li>
+      </ul>
+        <ul class="toc-footer">
+            <li><a href='https://github.com/lord/slate'>Documentation Powered by Slate</a></li>
+        </ul>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id='license-copyright-and-trademark'>License, Copyright, and Trademark</h1>
+
+<p>The content contained in this repository is the intellectual property of Snap One, LLC, (formerly known as Wirepath Home Systems, LLC), and use without a valid license from Snap One is strictly prohibited. The user of this repository shall keep all content contained herein confidential and shall protect this content in whole or in part from disclosure to any and all third parties except as specifically authorized in writing by Snap One.</p>
+
+<p><strong>License and Intellectual Property Disclaimer</strong></p>
+
+<p>The content in this repository is provided in connection with Snap One products. No license, express or implied, by estoppal or otherwise, to any intellectual property rights is granted by this document or in this repository. Except as provided in Snap Oneʼs terms and conditions for the license of such products, Snap One and its affiliates assume no liability whatsoever and disclaim any express or implied warranty, relating to the sale and/or use of Snap One products including liability or warranties relating to fitness for a particular purpose, merchantability, or infringement of any patent, copyright or other intellectual property right. Snap One products are not intended for use in medical, lifesaving, or life sustaining applications.</p>
+
+<p>Information regarding third-party products is provided solely for educational purposes. Snap One is not responsible for the performance or support of third-party products and does not make any representations or warranties whatsoever regarding the quality, reliability, functionality or compatibility of these products. The reader is advised that third parties can have intellectual property rights that can be relevant to this repository and the technologies discussed herein, and is advised to seek the advice of competent legal counsel regarding the intellectual property rights of third parties, without obligation of Snap One.</p>
+
+<p>Snap One retains the right make changes to this repository or related product specifications and descriptions in this repository, at any time, without notice. Snap One makes no warranty for the use of this repository and assumes no responsibility for any errors that can appear in the repository nor does it make a commitment to update the content contained herein.</p>
+
+<p><strong>Copyright</strong></p>
+
+<p>Copyright 2023 Snap One, LLC. All rights reserved.</p>
+
+<p>The above copyright notice applies to all content in this repository unless otherwise stated explicitly herein that a third-party’s copyright applies.</p>
+
+<p>No part of this publication may be reproduced, photocopied, stored on a retrieval system, or transmitted without the express written consent of the publisher.</p>
+
+<p><strong>Trademarks</strong></p>
+
+<p>Snap One and Snap One Logo, Control4 and the Control4 logo, and DriverWorks are trademarks or registered trademarks of  Snap One, LLC. Other product and company names mentioned in this repository may be the trademarks or registered trademarks of their respective owners.</p>
+
+<p><strong> Derivative Works</strong></p>
+
+<p>To the extent that you create any “Derivative Work” (meaning any work that is based upon one or more preexisting versions of the work provided to you in this repository, such as an enhancement or modification, revision, translation, abridgement, condensation, expansion, collection, compilation or any other form in which such preexisting works may be recast, modified, transformed or adapted, explicitly including without limitation, any updates or changes to Snap One, LLC’s software code or intellectual property) such Derivative Work shall be owned by Snap One, LLC and all right, title and interest in and to each such Derivative Work shall automatically vest in Snap One, LLC. To the extent any Derivative Work does not automatically vest in Snap One, LLC by operation of law, you hereby assign such Derivative Work to Snap One, LLC with full title guarantee. Snap One, LLC shall have no obligation to grant you any right in any such Derivative Work.</p>
+
+<p><strong>Contact Us</strong></p>
+
+<p>Snap One, LLC
+11734 S. Election Road
+Salt Lake City, UT 84020 USA</p>
+
+<p><a href="www.control4.com">http://www.control4.com</a></p>
+<h1 id='introduction'>Introduction</h1>
+
+<h2 id='introduction-proxies-commands'>Proxies (Commands)</h2>
+
+<p>A proxy driver is an interface to the Control4 system for a set of devices that share common functionality. For instance, most DVD disc changers have common controls such as PLAY, STOP, PAUSE and FAST FORWARD.  The disc changer proxy allows for a common user interface to control all disc changers.  The Control4 system (Director) sends information to and receives information from the proxy drivers.  The proxy drivers send information to and receives information from the protocol drivers.
+Remember, your DriverWorks driver interacts with the proxy driver which then interacts with the system.  As a driver developer you will be relying on this proxy to provide status (notification) to the Control4 system for the device you are controlling.  You will also receive commands from the system that you will act on to control the device.  These commands and notifications are at the heart of what you will be implementing in your driver.  Essentially your driver is becoming the go-between from the Control4 system and your device with the proxy driver giving structure to the commands and notifications which you will be implementing.
+Your driver can facilitate communications with multiple types of proxies for a single device. As an example, a Security System driver will utilize both the Security proxy and the Contacts proxy. These additional proxies are configured in the &lt;connections&gt; section of the .c4z.</p>
+
+<h2 id='introduction-protocol-notifications'>Protocol (Notifications)</h2>
+
+<p>Two similar devices may have the same functionality but utilize a very different command set.  A protocol driver provides the device-specific information needed to communicate with the Control4 system.  In the case of DriverWorks, the DriverWorks driver is the protocol driver.  When combined with the device-specific.c4Z file it provides the custom code necessary to implement the 2-way device driver.  In the case of DriverWorks, the DriverWorks driver is the protocol driver. When combined with the device-specific.c4Z file it provides the custom code necessary to implement the 2-way device driver.</p>
+<h1 id='what-s-new'>What’s New</h1>
+
+<h2 id='what-s-new-what-s-new-in-3-4-1'>What’s New in 3.4.1</h2>
+
+<p>There were no modifications to the Proxy and Protocol Guide in conjunction with O.S. Release 3.4.1.</p>
+
+<h2 id='what-s-new-what-s-new-in-3-4-0'>What’s New in 3.4.0</h2><h3 id='what-s-new-what-s-new-in-3-4-0-blind-proxy'>Blind Proxy</h3>
+<p>A new capability has been added to the proxy called <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#blind-capabilities-always_send_level">always_send_level</a>. If value is true, then the SetTargetLevel commands are always sent regardless of current level values. This is useful if the blind device does not support two-way communication and is controlled outside of the Control4 operating system. </p>
+<h3 id='what-s-new-what-s-new-in-3-4-0-camera-proxy'>Camera Proxy</h3>
+<p>Beginning with O.S. 3.4.0, camera drivers have the ability to distribute audio to devices running Navigator. If a camera supports the proper <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#camera-audio-distribution">CODEC</a> and the camera microphone has been enabled in the appropriate interface a new audio button will appear at the bottom of the single-camera view. This will allow the user to hear live audio with the live video.</p>
+<h3 id='what-s-new-what-s-new-in-3-4-0-generic-media-player-proxy'>Generic Media Player Proxy</h3>
+<p>A new capability has been added to the proxy called <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#generic-media-player-capabilities-allow_audio_pathing">allow_audio_pathing</a>. This capability is applicable in the scenario where the AV Switch proxy is included as a secondary proxy to the Generic Media Player Proxy. It is useful  when modeling streaming media devices that require minidrivers.</p>
+<h3 id='what-s-new-what-s-new-in-3-4-0-light-v2-proxy'>Light (v2) Proxy</h3>
+<p>The following color conversion functions have been modified in 3.4.0. The gamut parameter now receives a new valid string of: &quot;custom”. See the links below for more information.</p>
+
+<p>RGB functions:
+- <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-conversion-commands-colorrgbtoxy">ColorRGBtoXY</a>
+- <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-conversion-commands-colorxytorgb">ColorXYtoRGB</a></p>
+
+<p>HSV functions:
+- <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-conversion-commands-colorhsvtoxy">ColorHSVtoXY</a>
+- <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-conversion-commands-colorxytohsv">ColorXYtoHSV</a></p>
+
+<h2 id='what-s-new-what-s-new-in-3-3-2'>What’s New in 3.3.2</h2><h3 id='what-s-new-what-s-new-in-3-3-2-camera-proxy'>Camera Proxy</h3>
+<p><strong>Support for Dynamic Camera Streams</strong></p>
+
+<p>Camera drivers can now implement a new <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#dynamic-camera-streams">dynamic streams API</a> to provide a list of streams that the Navigators can pick from. </p>
+<h3 id='what-s-new-what-s-new-in-3-3-2-light-v2-proxy'>Light V2 Proxy</h3>
+<p><strong>Capabilities that have been Added</strong></p>
+
+<p>A new feature has been delivered in O.S. 3.3.2 which allows dealers and customers to specify how a light&#39;s brightness behaves when the light is turned on. The functionality includes:</p>
+
+<ul>
+<li>Preset - Light turns on to a preset level.</li>
+<li>Previous - Light turns on to the previous light level.</li>
+<li>Default On - Provided for backwards compatibility and is the same as setting Preset to On.</li>
+</ul>
+
+<p>Driver developers must opt-in to this new feature and which parts it wants to support via the following new capabilities:</p>
+
+<p><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-capabilities-brightness_on-mode_preset">brightness_on_mode_preset</a> has been included to enable the brightness presets for &quot;On Mode&quot; behavior for a light.</p>
+
+<p><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-capabilities-brightness_on_mode_previous">brightness_on_mode_previous</a> has been included to enable the Previous On &quot;On Mode&quot; brightness  behavior for a light.</p>
+
+<p>A new feature was created to allow dealers and customers to specify how a light&#39;s color behaves when a light is turned on. The functionality includes:</p>
+
+<ul>
+<li>Color Fade - Color behavior such as Dim to Warm</li>
+<li>Preset - Color changes to a preset.</li>
+<li>Previous - Color changes to the previous color value.</li>
+<li>Default On - Provided for backwards compatibility and is the same as setting Preset to On.</li>
+</ul>
+
+<p>Driver developers must opt-in to this new feature and which parts it wants to support via the following new capabilities:</p>
+
+<p><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-capabilities-color_on_mode_fade">color_on_mode_fade</a> has been included to enable the Fade On &quot;On Mode&quot; behavior, such as Dim to Warm, for a light.</p>
+
+<p><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-capabilities-color_on_mode_preset">color_on_mode_preset</a> has been included to enable presets for use with &quot;On Mode&quot; behavior for a light.</p>
+
+<p><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-capabilities-color_on_mode_previous">color_on_mode_previous</a> has been included to enable the Previous On &quot;On Mode&quot; behavior for a light.</p>
+
+<p>Additionally,  the following new capabilities have been included in 3.3.2:</p>
+
+<p>A new capability: <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-capabilities-brightness_rate_max">brightness_rate_max</a> has been included in support of drivers without buttons. This capability allows these driver to no longer need to define click and hold maximum rates.</p>
+
+<p>A new capability: <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-capabilities-brightness_rate_min">brightness_rate_min</a> has been included in support of drivers without buttons. This capability allows these driver to no longer need to define click and hold minimum rates.</p>
+
+<p>A new capability: <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-capabilities-supports_brightness_stop">supports_brightness_stop</a> has been included if a light brightness transition can be stopped during a ramp. </p>
+
+<p><strong>Capabilities that have been Deprecated</strong></p>
+
+<p>fixed_ramp_rate - Use <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-capabilities-click_rate_min">click_rate_min</a> and <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-capabilities-click_rate_max">click_rate_max</a> instead.</p>
+
+<p>has_fixed_ramp_rate - Use <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-capabilities-click_rate_min">click_rate_min</a> and <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-capabilities-click_rate_max">click_rate_max</a> instead.</p>
+
+<p>num_buttons</p>
+
+<p>ramp_level</p>
+
+<p>min_max</p>
+
+<p>on_off</p>
+
+<p>buttons_are_virtual</p>
+
+<p><strong>Commands that have been Added</strong></p>
+
+<p>Note: Enforcement of valid minimum and maximum values for many Light v2 commands are being enforced in conjunction with 3.3.2. </p>
+
+<p>A new command: <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-commands-add_driver_color_preset">ADD_DRIVER_COLOR_PRESET</a> has been included to add a new driver specific color preset.</p>
+
+<p>A new command: <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-commands-delete_driver_-color_-preset">DELETE_DRIVER_COLOR_PRESET</a> has been added to remove a driver configured color preset. </p>
+
+<p>A new command: <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-commands-dynamic_off">DYNAMIC_OFF</a> has been added to support UIs with an off command to pair with the DYNAMIC_ON command.</p>
+
+<p>A new command: <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-commands-dynamic_on">DYNAMIC_ON</a> has been added to allows UI&#39;s and programming to &quot;turn on&quot; a light involving both brightness and color in a single command</p>
+
+<p>A new command <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-commands-modify_driver_color_preset">MODIFY_DRIVER_COLOR_PRESET</a> has been included to change an existing driver color preset.</p>
+
+<p>A new command <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-commands-set_brightness_stop">SET_BRIGHTNESS_STOP</a> has been added to stop a ramp if in progress.</p>
+
+<p>A new command <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-commands-set_color_stop">SET_COLOR_STOP</a> has been added to stops a ramp of color if in progress.</p>
+
+<p>A new command <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-commands-set_brightness_on_mode">SET_BRIGHTNESS_ON_MODE</a> has been added to maintain the On preset value.</p>
+
+<p>A new command <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-commands-set_brightness_rate_default">SET_BRIGHTNESS_RATE_DEFAULT</a> has been added. This command is used in conjunction with generic On/Off commands to retrieve the <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-commands-update_brightness_rate_default">UPDATE_BRIGHTNESS_RATE_DEFAULT</a> value.</p>
+
+<p>A new command <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-commands-set_color_on_mode">SET_COLOR_ON_MODE</a>  has beed added define color on mode.</p>
+
+<p>A new command <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-commands-set_color_rate_default">SET_COLOR_RATE_DEFAULT</a> has been added. This command is used in conjunction with generic On/Off commands to retrieve the <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-commands-update_color_rate_default">UPDATE_COLOR_RATE_DEFAULT</a> value.</p>
+
+<p>A new command <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-commands-update_brightness_on_mode">UPDATE_BRIGHTNESS_ON_MODE</a> has been added to obtain how a light should turn on with regards to brightness.</p>
+
+<p>A new command <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-commands-set_brightness_rate_default">UPDATE_BRIGHTNESS_RATE_DEFAULT</a> has been added to provide a default value when a rate change is not provided.</p>
+
+<p>A new command <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-commands-update_brightness_preset">UPDATE_BRIGHTNESS_PRESET</a> has beeb added to send a command when a press is changed.</p>
+
+<p>A new command <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-commands-update_color_on_mode">UPDATE_COLOR_ON_MODE</a> has been added to obtain how a light should turn on with regards to color.</p>
+
+<p>A new command <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-commands-update_color_preset">UPDATE_COLOR_PRESET</a> has been added to manage On and Dim values across various brands and models of lights.</p>
+
+<p>A new command <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-commands-update_color_rate_default">UPDATE_COLOR_RATE_DEFAULT</a> has been added. This command is used in conjunction with generic On/Off commands to update the color rate default value.</p>
+
+<p><strong>Commands that have been Modified</strong></p>
+
+<p>The <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-commands-set_color_target">SET_COLOR_TARGET</a> command has been enhanced with new parameters to support hue, saturation and presets. Additionally, this command previously included a parameter of RATE. This parameter name has changed to LIGHT_COLOR_TARGET_RATE.</p>
+
+<p><strong>Commands that have been Deprecated</strong></p>
+
+<p>GET_LIGHT_LEVEL </p>
+
+<p>GET_CONNECTED_STATE </p>
+
+<p>GET_PROPERTIES </p>
+
+<p><strong>Conditionals that have been Added</strong></p>
+
+<p><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-conditionals">IS_BRIGHTNESS</a></p>
+
+<p><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-conditionals">IS_BRIGHTNESS_TARGET</a></p>
+
+<p><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-conditionals">IS_COLOR_TARGET</a> </p>
+
+<p><strong>Notifications that have been Modified</strong></p>
+
+<p>The <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-protocol-notifications-light_brightness_changing">LIGHT_BRIGHTNESS_CHANGING</a> notify has been modified to include two new optional parameters: LIGHT_BRIGHTNESS_CURRENT_PRESET_ID and LIGHT_BRIGHTNESS_TARGET_PRESET_ID.</p>
+
+<p>The <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-protocol-notifications-light_color_changing">LIGHT_COLOR_CHANGING</a> notify has been modified to include parameters for Preset IDs. Additionally, this notify previously included a parameter of RATE. This parameter name has changed to LIGHT_COLOR_TARGET_RATE.</p>
+
+<p>The <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-protocol-notifications-light_color_changed">LIGHT_COLOR_CHANGED</a> notify has been modified to include a parameter for a Preset ID.</p>
+
+<p><strong>Variables that have been Added</strong></p>
+
+<p><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-variables">Brightness Target Ramp Rate in Milliseconds</a></p>
+
+<p><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-variables">Brightness Target Rate Remaining in Milliseconds</a></p>
+
+<p><strong>Variables that have been Deprecated</strong></p>
+
+<p>PRESET_LEVEL has been deprecated as the <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-commands-update_brightness_on_mode">brightness_on_mode_preset</a> capability contains this value. </p>
+
+<p><strong>Known Issue(s)</strong></p>
+
+<p><em>Color Lighting Control may not Work on Some Drivers</em></p>
+
+<p>Currently, there is a known problem with color control not working on drivers that are looking for a RATE parameter in the <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-commands-set_color_target">SET_COLOR_TARGET </a>command. The RATE parameter was not correctly implemented due to the limits of support for color rate ramping in previous versions. We are finalizing the changes to make this fully work in 3.3.2. As a result, the “RATE” parameter name has been changed to “LIGHT_COLOR_TARGET_RATE”.</p>
+
+<p><em>Button Link Binding for Brightness Stop Functionality not Working</em></p>
+
+<p>A defect in 3.3.2 prevents keypad buttons bound to the Proxy’s BUTTON_LINK binding for Brightness Stop from working. This will be resolved in 3.3.3.</p>
+
+<h2 id='what-s-new-what-s-new-in-3-3-1'>What’s New in 3.3.1</h2>
+
+<p><strong>Light V2 Proxy</strong></p>
+
+<p>The capability: <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-capabilities-color_trace_tolerance">color_trace_tolerance</a> has been modified to accept a Delta value of &gt; .01. When provided, the CIELa*b* tolerance formula is used to determining if a color is the as another color in the system.</p>
+
+<p>The following Conversion Commands have been enhanced to include an optional parameter: gamut. This parameter allows for the specification of a gamut type for use in the conversions.</p>
+
+<ul>
+<li><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-conversion-commands-colorhsvtoxy">ColorHSVtoXY</a></li>
+<li><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-conversion-commands-colorxytohsv">ColorXYtoHSV</a></li>
+<li><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-conversion-commands-colorrgbtoxy">ColorRGBtoXY</a></li>
+<li><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-conversion-commands-colorxytorgb">ColorXYtoRGB</a></li>
+</ul>
+
+<p><strong>Camera Proxy</strong></p>
+
+<p>The Camera Proxy documentation has been has enhanced to include new information regarding:</p>
+
+<ul>
+<li><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#dynamic-camera-streams">Camera Streams</a></li>
+<li><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#dynamic-camera-streams">Driver Support for Multiple Streams</a></li>
+<li><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#dynamic-camera-streams">Support for Caching URLS</a></li>
+<li><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#camera-proxy-extras-interface-library">Support for The Extras Interface Library</a> </li>
+</ul>
+
+<p>A new command: <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#camera-proxy-commands-get_stream_urls">GET_STREAM_URLS</a> has been added. It is used to obtain URLs for a camera that does not have a constant URL like a Cloud based camera or for cameras that have a wider range of features and configurable options that can produce better customer experiences using various client</p>
+
+<p>A new notification: <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#camera-protocol-notifications-stream_urls_ready">STREAM_URLS_READY</a> has been added. This notify is used as a follow up to a GET_STREAM_URLS Synchronous call. This Notify will let a UI know that the URL information they requested is ready. </p>
+
+<p>New capabilities added to the Camera proxy include:  </p>
+
+<ul>
+<li><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#camera-capabilities-dynamic_urls_use_type">dynamic_urls_use_type</a></li>
+<li><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#camera-capabilities-requires_dynamic_stream_urls">requires_dynamic_stream_urls</a></li>
+</ul>
+
+<p>Dynamic Presets are now supported within the Camera Proxy.  The following preset functionality has been include: </p>
+
+<ul>
+<li>Save new presets.</li>
+<li>Change preset name.</li>
+<li>Recapture/update existing preset.</li>
+<li>Reorder presets.</li>
+<li>Delete a preset.</li>
+</ul>
+
+<p>Dynamic Presets require the following new Capability:</p>
+
+<ul>
+<li><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#camera-capabilities-has_dynamic_presets">has_dynamic_presets</a></li>
+</ul>
+
+<p>Dynamic Presets require the following new Notifications:</p>
+
+<ul>
+<li><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#camera-protocol-notifications-dynamic_urls_changed">DYNAMIC_URLS_CHANGED</a></li>
+</ul>
+
+<p>Dynamic Presets require the following new Commands:</p>
+
+<ul>
+<li><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#camera-proxy-commands-select_preset">SELECT_PRESET</a></li>
+<li><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#camera-proxy-commands-change_preset_name">CHANGE_PRESET_NAME</a></li>
+<li><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#camera-proxy-commands-modify_preset">MODIFY_PRESET</a></li>
+<li><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#camera-proxy-commands-delete_preset">DELETE_PRESET</a></li>
+<li><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#camera-proxy-commands-change_preset_order">CHANGE_PRESET_ORDER</a></li>
+</ul>
+
+<p>The following existing Camera Proxy capabilities are now Dynamic Capabilities:</p>
+
+<ul>
+<li><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#camera-capabilities-has_-pan">has_pan</a></li>
+<li><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#camera-capabilities-has_tilt">has_tilt</a></li>
+<li><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#camera-capabilities-has_zoom">has_zoom</a></li>
+<li><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#camera-capabilities-has_home">has_home</a></li>
+</ul>
+
+<h2 id='what-s-new-what-s-new-in-3-3-0'>What’s New in 3.3.0</h2><h3 id='what-s-new-what-s-new-in-3-3-0-light-proxy-color-enhancements'>Light Proxy Color Enhancements</h3>
+<p>This release of the 3.3.0 beta Proxy and Protocol Guide has been delivered to support the Light Proxy’s new color management functionality. This includes:</p>
+<h3 id='what-s-new-what-s-new-in-3-3-0-light-v2-proxy-capabilities'>Light V2 Proxy Capabilities</h3>
+<p><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-capabilities-color_correlated_temperature_max">color_correlated_temperature_max</a></p>
+
+<p><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-capabilities-color_correlated_temperature_min">color_correlated_temperature_min</a></p>
+
+<p><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-capabilities-color_rate_behavior">color_rate_behavior</a></p>
+
+<p><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-capabilities-color_rate_max">color_rate_max</a></p>
+
+<p><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-capabilities-color_rate_min">color_rate_min</a></p>
+
+<p><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-capabilities-color_trace_tolerance">color_trace_tolerance</a></p>
+
+<p><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-capabilities-supports_color">supports_color</a></p>
+
+<p><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-capabilities-supports_color_correlated_temperature">supports_color_correlated_temperature</a></p>
+<h3 id='what-s-new-what-s-new-in-3-3-0-light-v2-proxy-commands'>Light V2 Proxy Commands</h3>
+<p><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-commands-set_color_target">SET_COLOR_TARGET</a></p>
+<h3 id='what-s-new-what-s-new-in-3-3-0-light-v2-proxy-conversion-commands'>Light V2 Proxy Conversion Commands</h3>
+<p>This section lists the <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-conversion-commands">Commands</a> used for converting to/from hue, saturation and lightness (HSV) and red, blue and green (RGB).</p>
+<h3 id='what-s-new-what-s-new-in-3-3-0-light-v2-proxy-conditionals'>Light V2 Proxy Conditionals</h3>
+<p><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-conditionals">IS_COLOR</a></p>
+<h3 id='what-s-new-what-s-new-in-3-3-0-light-v2-protocol-notifications'>Light v2 Protocol Notifications</h3>
+<p><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-protocol-notifications-light_color_changed">LIGHT_COLOR_CHANGED</a></p>
+
+<p><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-protocol-notifications-light_color_changing">LIGHT_COLOR_CHANGING</a></p>
+<h3 id='what-s-new-what-s-new-in-3-3-0-light-v2-proxy-events'>Light V2 Proxy Events</h3>
+<p><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-events">light_color_changed</a></p>
+
+<p><a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-events">light_color_changing</a></p>
+<h3 id='what-s-new-what-s-new-in-3-3-0-light-v2-proxy-extras'>Light V2 Proxy Extras</h3>
+<p>New supporting <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-v2-extras-interface-library">documentation</a>.</p>
+<h3 id='what-s-new-what-s-new-in-3-3-0-advanced-lighting-scene-agent'>Advanced Lighting Scene Agent </h3>
+<p>New supporting <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#advanced-lighting-scene-agent">documentation</a>.</p>
+<h3 id='what-s-new-what-s-new-in-3-3-0-light-driver-development-best-practices'>Light Driver Development Best Practices</h3>
+<p>A new section has been added to the Light V2 proxy content including <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#light-driver-development-best-practices">best practice recommendations</a> for light driver developers.</p>
+<h3 id='what-s-new-what-s-new-in-3-3-0-audio-video-switch-display-adjustable-bindings'>Audio Video Switch Display Adjustable Bindings</h3>
+<p>O.S. releases 3.3.0 provides the ability to hide <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#display-adjustable-av-switch-bindings">AV Switch Bindings</a> that are not being used. This feature has been provided to better manage the UI display within ComposerPro.</p>
+
+<h2 id='what-s-new-what-s-new-in-3-2-3'>What’s New in 3.2.3</h2>
+
+<p><strong>Audio Equalization available on Navigators</strong></p>
+
+<p>The <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#amplifier-navigator-eq">Amplifier</a> and <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#audio-video-switch-navigator-eq">AV Switch</a> Proxies have been enhanced to support the ability to display audio EQ functions on devices running Navigator. The enhancement includes a set of new Proxy Commands, Notifications and Capabilities to support this functionality.</p>
+
+<p><strong>Dynamic Transport Controls on Navigators</strong></p>
+
+<p>Audio Video drivers now have the ability to define which <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#dynamic-transport-controls-in-navigator">transport controls</a> are displayed on Navigators. This includes which buttons appear on the Button Bar as well as the Media Dashboard. This enhancement allows for the appropriate transport controls being displayed for each AV device.</p>
+
+<h2 id='what-s-new-what-s-new-in-3-2-2'>What’s New in 3.2.2</h2>
+
+<p><em>There were no changes to this content for Operating System 3.2.2.</em></p>
+
+<h2 id='what-s-new-what-s-new-in-3-2-1'>What’s New in 3.2.1</h2>
+
+<p><em>There were no changes to this content for Operating System 3.2.1.</em></p>
+
+<p><h2 id='what-s-new-what-s-new-in-3-2-0'>What’s New in 3.2.0</h2><h3 id='what-s-new-what-s-new-in-3-2-0-proxies-that-were-modified'>Proxies that were Modified** </h3>
+<p><strong>Security Proxy</strong>
+The <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#security-partition-notifications-request_default_user_code_">REQUEST_DEFAULT_USER_CODE</a> partition notification was added as a mechanism for the protocol driver
+to initiate the communication to get that default user code upon driver update.</p></p>
+
+<p>The following Security Protocol Notifications were deprecated from the SDK: ALARM, ALARM_CLEAR, AWAY, DISARM, HOME, TROUBLE. Please see the <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#security-panel-notifications">Security Panel Notification</a> and <a href="https://snap-one.github.io/docs-driverworks-proxyprotocol/#security-partition-notifications">Security Partition Notification</a> areas for the latest list of Notifies.</p>
+
+<p><h2 id='what-s-new-what-was-new-in-3-1-2'>What was New in 3.1.2</h2><h3 id='what-s-new-what-was-new-in-3-1-2-proxies-that-were-deprecated'>Proxies that were Deprecated** </h3>
+<p>The following Proxies were deprecated from the Proxy and Protocol Guide:</p></p>
+
+<ul>
+<li>iPod</li>
+<li>Load Controller</li>
+</ul>
+
+<p><h2 id='what-s-new-what-was-new-in-3-1-0'>What was New in 3.1.0</h2><h3 id='what-s-new-what-was-new-in-3-1-0-proxies-that-were-modified'>Proxies that were Modified** </h3>
+<p><strong>Light V2 Proxy</strong>
+light sample.c4i - A sample driver has been included to assist with better understanding the basic flow of commands from the Light Proxy as well as receiving protocol notifications. The driver can be found in the Samples directory under the root level of the DriverWorks SDK.zip file</p></p>
+
+<p><strong>Media Service Proxy</strong>
+Detail Screen Type - Information regarding the implementation of the Detail Type Screen has been added to the documentation.</p>
+
+<p><h2 id='what-s-new-what-was-new-in-o-s-3'>What was New in O.S.3</h2><h3 id='what-s-new-what-was-new-in-o-s-3-proxies-that-were-modified'>Proxies that were Modified** </h3>
+<p><strong>KeyPad Proxy</strong></p></p>
+
+<p>New Button Linking functionality has been added to the Proxy. Button Linking supports the ability of a driver interacting with a second driver using Button State and Button LED State. </p>
+
+<p><strong>Light (V2) Proxy</strong>
+LightV2 Proxy has been significantly enhanced in this release. It is recommended that Light Driver writers thoroughly review the Proxy content in this release. The changes included not only impact drivers written against OS 3. Previously delivered Light Proxy elements have been modified or in some cases deprecated. </p>
+
+<p>In OS 3, the proxy has been conceptually split into two components. The first being a Wall Control/Keypad portion and the second is a redesigned Light portion.The Light portion has been developed as a Bulb Library. The ultimate goal of the Bulb Library is to support ,more versatility for drivers to interrogate, group, control and manage individual drivers and bulbs. Bulb color, target level, minimum and maximum levels, cold start timing and other features are implemented in the Bulb Library. Dynamic Capabilities have also been added to the Light Portion. Note that all changes maintain backwards compatibility for driver side interaction. However, Navigators will have functionality deprecated due to performance reasons or improved ways of communicating with the driver.</p>
+
+<p><strong>Media Service Proxy</strong>
+Favoriting: In conjunction with the ability to &quot;Favorite&quot; Navigator UI screens in OS 3, drivers written using the Media Service Proxy can now provide the ability for end users to designate favorite media delivered through an Media Service Proxy driver such as Playlists, Albums, Tracks, Stations, Movies, TV Shows, etc. </p>
+
+<p>DashboardChanged Event: The DashboardChanged event now includes content on the use of custom icons and actions.</p>
+
+<p>Driver Notification Context Example: New code examples on have been added to the Media Service Proxy Driver Notification Prototype section in the Appendix.</p>
+
+<p><strong> Best Practices</strong>
+A new section called Best Practices has been added to the Proxy and Protocol Guide. This section contains information regarding the use cases that fall outside of the typical Proxy/Protocol driver implementation. This release contains Best Practice content on the following:</p>
+
+<p>Using the new Proxy-less command UPDATE PROPERTY. This is a non proxy-specific function that can be called from any device to change a property of any other device.</p>
+
+<p>OS 3 Navigator UI and Volume Control - Managing Volume Commands in conjunction with the use of OS 3&#39;s new volume control slider on the Control4 UI.</p>
+<h1 id='audio-video-switch-capabilities'>Audio Video Switch Capabilities</h1>
+
+<h2 id='audio-video-switch-capabilities-audio_consumer_count'>audio_consumer_count</h2>
+
+<p>Count of number of audio consumers (inputs) of the device. This value must match the number of connections in the driver.</p>
+
+<h3 id='audio-video-switch-capabilities-audio_consumer_count-signature'>Signature</h3>
+
+<p><code>&lt;audio_consumer_count&gt;&lt;/audio_consumer_count&gt;</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>int</td>
+<td>Number of audio consumers.</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-capabilities-audio_consumer_count-example'>Example</h3><div class="highlight"><pre class="highlight xml tab-xml"><code><span class="nt">&lt;capabilities&gt;</span>
+   <span class="nt">&lt;audio_consumer_count&gt;</span>8<span class="nt">&lt;/audio_consumer_count&gt;</span>
+<span class="nt">&lt;/capabilities&gt;</span>
+</code></pre></div>
+<h2 id='audio-video-switch-capabilities-audio_provider_count'>audio_provider_count</h2>
+<p>Count of number of audio providers (outputs) of the device. This value must match the number of connections in the driver.</p>
+<h3 id='audio-video-switch-capabilities-audio_provider_count-signature'>Signature</h3>
+
+<p><code>&lt;audio_provider_count&gt;&lt;/audio_provider_count&gt;</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>int</td>
+<td>Number of audio providers.</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-capabilities-audio_provider_count-example'>Example</h3><div class="highlight"><pre class="highlight xml tab-xml"><code><span class="nt">&lt;capabilities&gt;</span>
+   <span class="nt">&lt;audio_provider_count&gt;</span>8<span class="nt">&lt;/audio_provider_count&gt;</span>
+<span class="nt">&lt;/capabilities&gt;</span>
+</code></pre></div>
+<h2 id='audio-video-switch-capabilities-can_-downclass'>can_ downclass</h2>
+<p>Specifies if the A/V switch can down convert. For example: S-Video -&gt; Composite</p>
+<h3 id='audio-video-switch-capabilities-can_-downclass-signature'>Signature</h3>
+
+<p><code>&lt;can_downclass&gt;&lt;/can_downclass&gt;</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>bool</td>
+<td>True/False</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-capabilities-can_-downclass-example'>Example</h3><div class="highlight"><pre class="highlight xml tab-xml"><code><span class="nt">&lt;capabilities&gt;</span>
+   <span class="nt">&lt;can_downclass&gt;</span>true<span class="nt">&lt;/can_downclass&gt;</span>
+<span class="nt">&lt;/capabilities&gt;</span>
+</code></pre></div>
+<h2 id='audio-video-switch-capabilities-can_switch_separately'>can_switch_separately</h2>
+<p>Device specific capability that must be set to True to in order for an AV Switch’s Composer Pro interface reflecting independent audio and video signal switching.</p>
+<h3 id='audio-video-switch-capabilities-can_switch_separately-signature'>Signature</h3>
+
+<p><code>&lt;can_switch_separately&gt;&lt;/can_switch_separately&gt;</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>bool</td>
+<td>True/False</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-capabilities-can_switch_separately-usage-note'>Usage Note</h3>
+
+<p>This capability is not related with the requires separate switching capability.  A setting of True or False will have no impact on requires separate switching.</p>
+
+<h3 id='audio-video-switch-capabilities-can_switch_separately-example'>Example</h3><div class="highlight"><pre class="highlight xml tab-xml"><code><span class="nt">&lt;capabilities&gt;</span>
+   <span class="nt">&lt;can_switch_separately&gt;</span>true<span class="nt">&lt;/can_switch_separately&gt;</span>
+<span class="nt">&lt;/capabilities&gt;</span>
+</code></pre></div>
+<h2 id='audio-video-switch-capabilities-can_upclass'>can_upclass</h2>
+<p>Specifies if the A/V switch can up convert. For example: Composite -&gt; S-Video </p>
+<h3 id='audio-video-switch-capabilities-can_upclass-signature'>Signature</h3>
+
+<p><code>&lt;can_upclass&gt;&lt;/can_upclass&gt;</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>bool</td>
+<td>True/False</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-capabilities-can_upclass-example'>Example</h3><div class="highlight"><pre class="highlight xml tab-xml"><code><span class="nt">&lt;capabilities&gt;</span>
+   <span class="nt">&lt;can_upclass&gt;</span>true<span class="nt">&lt;/can_upclass&gt;</span>
+<span class="nt">&lt;/capabilities&gt;</span>
+</code></pre></div>
+<h2 id='audio-video-switch-capabilities-has_audio_signal_sense'>has_audio_signal_sense</h2>
+<p>Specifies AV switching is capable of sensing audio on an input.  This is useful in triggering programming in ComposerPro based on the this setting.</p>
+<h3 id='audio-video-switch-capabilities-has_audio_signal_sense-signature'>Signature</h3>
+
+<p><code>&lt;has_audio_signal_sense&gt;&lt;/has_audio_signal_sense&gt;</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>bool</td>
+<td>True/False</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-capabilities-has_audio_signal_sense-example'>Example</h3><div class="highlight"><pre class="highlight xml tab-xml"><code><span class="nt">&lt;capabilities&gt;</span>
+   <span class="nt">&lt;has_audio_signal_sense&gt;</span>true<span class="nt">&lt;/has_audio_signal_sense&gt;</span>
+<span class="nt">&lt;/capabilities&gt;</span>
+</code></pre></div>
+<h2 id='audio-video-switch-capabilities-has_-discrete_balance_control'>has_ discrete_balance_control</h2>
+<p>Capable of directly specifying a balance setting.</p>
+<h3 id='audio-video-switch-capabilities-has_-discrete_balance_control-signature'>Signature</h3>
+
+<p><code>&lt;has_discrete_balance_control&gt;&lt;/has_discrete_balance_control&gt;</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>bool</td>
+<td>True/False</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-capabilities-has_-discrete_balance_control-example'>Example</h3><div class="highlight"><pre class="highlight xml tab-xml"><code><span class="nt">&lt;capabilities&gt;</span>
+   <span class="nt">&lt;has_discrete_balance_control&gt;</span>true<span class="nt">&lt;/has_discrete_balance_control&gt;</span>
+<span class="nt">&lt;/capabilities&gt;</span>
+</code></pre></div>
+<h2 id='audio-video-switch-capabilities-has_discrete_bass_control'>has_discrete_bass_control</h2>
+<p>Capable of directly specifying a bass setting.</p>
+<h3 id='audio-video-switch-capabilities-has_discrete_bass_control-signature'>Signature</h3>
+
+<p><code>&lt;has_discrete_bass_control&gt;&lt;/has_discrete_bass_control&gt;</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>bool</td>
+<td>True/False</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-capabilities-has_discrete_bass_control-example'>Example</h3><div class="highlight"><pre class="highlight xml tab-xml"><code><span class="nt">&lt;capabilities&gt;</span>
+   <span class="nt">&lt;has_discrete_bass_control&gt;</span>true<span class="nt">&lt;/has_discrete_bass_control&gt;</span>
+<span class="nt">&lt;/capabilities&gt;</span>
+</code></pre></div>
+<h2 id='audio-video-switch-capabilities-has_discrete_loudness_control'>has_discrete_loudness_control</h2>
+<p>Capable of directly specifying a loudness setting.</p>
+<h3 id='audio-video-switch-capabilities-has_discrete_loudness_control-signature'>Signature</h3>
+
+<p><code>&lt;has_discrete_loudness_control&gt;&lt;/has_discrete_loudness_control&gt;</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>bool</td>
+<td>True/False</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-capabilities-has_discrete_loudness_control-example'>Example</h3><div class="highlight"><pre class="highlight xml tab-xml"><code><span class="nt">&lt;capabilities&gt;</span>
+   <span class="nt">&lt;has_discrete_loudness_control&gt;</span>true<span class="nt">&lt;/has_discrete_loudness_control&gt;</span>
+<span class="nt">&lt;/capabilities&gt;</span>
+</code></pre></div>
+<h2 id='audio-video-switch-capabilities-has_discrete_mute_control'>has_discrete_mute_control</h2>
+<p>Capable of directly specifying mute ON or OFF setting.</p>
+<h3 id='audio-video-switch-capabilities-has_discrete_mute_control-signature'>Signature</h3>
+
+<p><code>&lt;has_discrete_ mute_control&gt;&lt;/has_discrete_ mute_control&gt;</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>bool</td>
+<td>True/False</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-capabilities-has_discrete_mute_control-example'>Example</h3><div class="highlight"><pre class="highlight xml tab-xml"><code><span class="nt">&lt;capabilities&gt;</span>
+   <span class="nt">&lt;has_discrete_mute_control&gt;</span>true<span class="nt">&lt;/has_discrete_mute_control&gt;</span>
+<span class="nt">&lt;/capabilities&gt;</span>
+</code></pre></div>
+<h2 id='audio-video-switch-capabilities-has_discrete_treble_control'>has_discrete_treble_control</h2>
+<p>Capable of directly specifying a treble setting.</p>
+<h3 id='audio-video-switch-capabilities-has_discrete_treble_control-signature'>Signature</h3>
+
+<p><code>&lt;has_discrete_treble_control&gt;&lt;/has_discrete_treble_control&gt;</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>bool</td>
+<td>True/False</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-capabilities-has_discrete_treble_control-example'>Example</h3><div class="highlight"><pre class="highlight xml tab-xml"><code><span class="nt">&lt;capabilities&gt;</span>
+   <span class="nt">&lt;has_discrete_treble_control&gt;</span>true<span class="nt">&lt;/has_discrete_treble_control&gt;</span>
+<span class="nt">&lt;/capabilities&gt;</span>
+</code></pre></div>
+<h2 id='audio-video-switch-capabilities-has_discrete_volume_control'>has_discrete_volume_control</h2>
+<p>Capable of directly specifying a volume setting.</p>
+<h3 id='audio-video-switch-capabilities-has_discrete_volume_control-signature'>Signature</h3>
+
+<p><code>&lt;has_discrete_volume_control&gt;&lt;/has_discrete_volume_control&gt;</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>bool</td>
+<td>True/False</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-capabilities-has_discrete_volume_control-example'>Example</h3><div class="highlight"><pre class="highlight xml tab-xml"><code><span class="nt">&lt;capabilities&gt;</span>
+   <span class="nt">&lt;has_discrete_volume_control&gt;</span>true<span class="nt">&lt;/has_discrete_volume_control&gt;</span>
+<span class="nt">&lt;/capabilities&gt;</span>
+</code></pre></div>
+<h2 id='audio-video-switch-capabilities-has_discrete_loudness_control'>has_discrete_loudness_control</h2>
+<p>Capable of handling ON/OFF loudness control.</p>
+<h3 id='audio-video-switch-capabilities-has_discrete_loudness_control-signature'>Signature</h3>
+
+<p><code>&lt;has_discrete_loudness_control&gt;&lt;/has_discrete_loudness_control&gt;</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>bool</td>
+<td>True/False</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-capabilities-has_discrete_loudness_control-example'>Example</h3><div class="highlight"><pre class="highlight xml tab-xml"><code><span class="nt">&lt;capabilities&gt;</span>
+   <span class="nt">&lt;has_discrete_loudness_control&gt;</span>true<span class="nt">&lt;/has_discrete_loudness_control&gt;</span>
+<span class="nt">&lt;/capabilities&gt;</span>
+</code></pre></div>
+<h2 id='audio-video-switch-capabilities-has_toggle_mute_control'>has_toggle_mute_control</h2>
+<p>Capable of handling ON/OFF mute control.</p>
+<h3 id='audio-video-switch-capabilities-has_toggle_mute_control-signature'>Signature</h3>
+
+<p><code>&lt;has_toggle_mute_control&gt;&lt;/has_toggle_mute_control&gt;</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>bool</td>
+<td>True/False</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-capabilities-has_toggle_mute_control-example'>Example</h3><div class="highlight"><pre class="highlight xml tab-xml"><code><span class="nt">&lt;capabilities&gt;</span>
+   <span class="nt">&lt;has_toggle_mute_control&gt;</span>true<span class="nt">&lt;/has_toggle_mute_control&gt;</span>
+<span class="nt">&lt;/capabilities&gt;</span>
+</code></pre></div>
+<h2 id='audio-video-switch-capabilities-has_up_down_balance_control'>has_up_down_balance_control</h2>
+<p>Capable of directly specifying a balance setting.</p>
+<h3 id='audio-video-switch-capabilities-has_up_down_balance_control-signature'>Signature</h3>
+
+<p><code>&lt;has_up_down_balance_control&gt;&lt;/has_up_down_balance_control&gt;</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>bool</td>
+<td>True/False</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-capabilities-has_up_down_balance_control-example'>Example</h3><div class="highlight"><pre class="highlight xml tab-xml"><code><span class="nt">&lt;capabilities&gt;</span>
+   <span class="nt">&lt;has_up_down_balance_control&gt;</span>true<span class="nt">&lt;/has_up_down_balance_control&gt;</span>
+<span class="nt">&lt;/capabilities&gt;</span>
+</code></pre></div>
+<h2 id='audio-video-switch-capabilities-has_up_down_bass_control'>has_up_down_bass_control</h2>
+<p>Capable of directly specifying a bass setting.</p>
+<h3 id='audio-video-switch-capabilities-has_up_down_bass_control-signature'>Signature</h3>
+
+<p><code>&lt;has_up_down_bass_control&gt;&lt;/has_up_down_bass_control&gt;</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>bool</td>
+<td>True/False</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-capabilities-has_up_down_bass_control-example'>Example</h3><div class="highlight"><pre class="highlight xml tab-xml"><code><span class="nt">&lt;capabilities&gt;</span>
+   <span class="nt">&lt;has_up_down_bass_control&gt;</span>true<span class="nt">&lt;/has_up_down_bass_control&gt;</span>
+<span class="nt">&lt;/capabilities&gt;</span>
+</code></pre></div>
+<h2 id='audio-video-switch-capabilities-has_up_down_treble_control'>has_up_down_treble_control</h2>
+<p>Capable of directly specifying a treble setting.</p>
+<h3 id='audio-video-switch-capabilities-has_up_down_treble_control-signature'>Signature</h3>
+
+<p><code>&lt;has_up_down_treble_control&gt;&lt;/has_up_down_treble_control&gt;</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>bool</td>
+<td>True/False</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-capabilities-has_up_down_treble_control-example'>Example</h3><div class="highlight"><pre class="highlight xml tab-xml"><code><span class="nt">&lt;capabilities&gt;</span>
+   <span class="nt">&lt;has_up_down_treble_control&gt;</span>true<span class="nt">&lt;/has_up_down_treble_control&gt;</span>
+<span class="nt">&lt;/capabilities&gt;</span>
+</code></pre></div>
+<h2 id='audio-video-switch-capabilities-has_up_down_volume_control'>has_up_down_volume_control</h2>
+<p>Has capability of handling volume UP and DOWN adjustments.</p>
+<h3 id='audio-video-switch-capabilities-has_up_down_volume_control-signature'>Signature</h3>
+
+<p><code>&lt;has_up_down_volume_control&gt;&lt;/has_up_down_volume_control&gt;</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>bool</td>
+<td>True/False</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-capabilities-has_up_down_volume_control-example'>Example</h3><div class="highlight"><pre class="highlight xml tab-xml"><code><span class="nt">&lt;capabilities&gt;</span>
+   <span class="nt">&lt;has_up_down_volume_control&gt;</span>true<span class="nt">&lt;/has_up_down_volume_control&gt;</span>
+<span class="nt">&lt;/capabilities&gt;</span>
+</code></pre></div>
+<h2 id='audio-video-switch-capabilities-has_video_signal_sense'>has_video_signal_sense</h2>
+<p>Specifies AV switching is capable of sensing video on an input. This is useful in triggering programming in ComposerPro based on the this setting.</p>
+<h3 id='audio-video-switch-capabilities-has_video_signal_sense-signature'>Signature</h3>
+
+<p><code>&lt;has_video_signal_sense&gt;&lt;/has_video_signal_sense&gt;</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>bool</td>
+<td>True/False</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-capabilities-has_video_signal_sense-example'>Example</h3><div class="highlight"><pre class="highlight xml tab-xml"><code><span class="nt">&lt;capabilities&gt;</span>
+   <span class="nt">&lt;has_video_signal_sense&gt;</span>true<span class="nt">&lt;/has_video_signal_sense&gt;</span>
+<span class="nt">&lt;/capabilities&gt;</span>
+</code></pre></div>
+<h2 id='audio-video-switch-capabilities-requires_-separate_switching'>requires_ separate_switching</h2>
+<p>Device specific capability that when set to True notifies Director of the existence of individual audio and video paths. This capability has no impact on Composer Pro user interface. For that reason, when set to True it is recommended that the capability can switch separately be set to True as well.</p>
+<h3 id='audio-video-switch-capabilities-requires_-separate_switching-signature'>Signature</h3>
+
+<p><code>&lt;requires_separate_switching&gt;&lt;/requires_separate_switching&gt;</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>bool</td>
+<td>True/False</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-capabilities-requires_-separate_switching-example'>Example</h3><div class="highlight"><pre class="highlight xml tab-xml"><code><span class="nt">&lt;capabilities&gt;</span>
+   <span class="nt">&lt;requires_separate_switching&gt;</span>true<span class="nt">&lt;/requires_separate_switching&gt;</span>
+<span class="nt">&lt;/capabilities&gt;</span>
+</code></pre></div>
+<h2 id='audio-video-switch-capabilities-video_consumer_count'>video_consumer_count</h2>
+<p>Count of number of video consumers (inputs) of the device. This value must match the number of connections in the driver.</p>
+<h3 id='audio-video-switch-capabilities-video_consumer_count-signature'>Signature</h3>
+
+<p><code>&lt;video_consumer_count&gt;&lt;/video_consumer_count&gt;</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>int</td>
+<td>Number of video consumers.</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-capabilities-video_consumer_count-example'>Example</h3><div class="highlight"><pre class="highlight xml tab-xml"><code><span class="nt">&lt;capabilities&gt;</span>
+   <span class="nt">&lt;video_consumer_count&gt;</span>8<span class="nt">&lt;/video_consumer_count&gt;</span>
+<span class="nt">&lt;/capabilities&gt;</span>
+</code></pre></div>
+<h2 id='audio-video-switch-capabilities-video_provider_count'>video_provider_count</h2>
+<p>Count of number of video providers (outputs) of the device. This value must match the number of connections in the driver.</p>
+<h3 id='audio-video-switch-capabilities-video_provider_count-signature'>Signature</h3>
+
+<p><code>&lt;video_provider_count&gt;&lt;/video_provider_count&gt;</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>int</td>
+<td>Number of audio providers.</td>
+</tr>
+</tbody></table>
+
+<p><h3 id='audio-video-switch-capabilities-video_provider_count-example'>Example</h3><div class="highlight"><pre class="highlight xml tab-xml"><code><span class="nt">&lt;capabilities&gt;</span>
+   <span class="nt">&lt;video_provider_count&gt;</span>8<span class="nt">&lt;/video_provider_count&gt;</span>
+<span class="nt">&lt;/capabilities&gt;</span>
+</code></pre></div></p>
+<h1 id='audio-video-switch-protocol-notifications'>Audio Video Switch Protocol Notifications</h1>
+
+<h2 id='audio-video-switch-protocol-notifications-audio_parameter_changed'>AUDIO_PARAMETER_CHANGED</h2>
+
+<p>Audio parameter has changed</p>
+
+<h3 id='audio-video-switch-protocol-notifications-audio_parameter_changed-name'>Name</h3>
+
+<p><code>AUDIO_PARAMETER_CHANGED ()</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>OUTPUT</td>
+<td>INT</td>
+<td>Output Binding ID</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-protocol-notifications-audio_parameter_changed-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='audio-video-switch-protocol-notifications-balance_level_changed'>BALANCE_LEVEL_CHANGED</h2>
+
+<p>Selected balance level has changed.</p>
+
+<h3 id='audio-video-switch-protocol-notifications-balance_level_changed-name'>Name</h3>
+
+<p><code>BALANCE_LEVEL_CHANGED ()</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>LEVEL</td>
+<td>INT</td>
+<td>Level</td>
+</tr>
+<tr>
+<td>OUTPUT</td>
+<td>INT</td>
+<td>Output Binding ID</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-protocol-notifications-balance_level_changed-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='audio-video-switch-protocol-notifications-bass_level_changed'>BASS_LEVEL_CHANGED</h2>
+
+<p>Selected bass level has changed</p>
+
+<h3 id='audio-video-switch-protocol-notifications-bass_level_changed-name'>Name</h3>
+
+<p><code>BASS_LEVEL_CHANGED ()</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>LEVEL</td>
+<td>INT</td>
+<td>Level</td>
+</tr>
+<tr>
+<td>OUTPUT</td>
+<td>INT</td>
+<td>Output Binding ID</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-protocol-notifications-bass_level_changed-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='audio-video-switch-protocol-notifications-input_output_changed'>INPUT_OUTPUT_CHANGED</h2>
+
+<p>Selected inputs &amp; outputs have changed.</p>
+
+<h3 id='audio-video-switch-protocol-notifications-input_output_changed-name'>Name</h3>
+
+<p><code>INPUT_OUTPUT_CHANGED ()</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>INPUT</td>
+<td>INT</td>
+<td>Input Binding ID</td>
+</tr>
+<tr>
+<td>OUTPUT</td>
+<td>INT</td>
+<td>Output Binding ID</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-protocol-notifications-input_output_changed-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='audio-video-switch-protocol-notifications-loudness_changed'>LOUDNESS_CHANGED</h2>
+
+<p>Loudness state (On/Off) has changed.</p>
+
+<h3 id='audio-video-switch-protocol-notifications-loudness_changed-name'>Name</h3>
+
+<p><code>LOUDNESS_CHANGED ()</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>LOUDNESS</td>
+<td>BOOL</td>
+<td>True/False</td>
+</tr>
+<tr>
+<td>OUTPUT</td>
+<td>INT</td>
+<td>Indicates a change in loudness for the specified output binding ID.</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-protocol-notifications-loudness_changed-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='audio-video-switch-protocol-notifications-mute_changed'>MUTE_CHANGED</h2>
+
+<p>MUTE state (On/Off) has changed.</p>
+
+<h3 id='audio-video-switch-protocol-notifications-mute_changed-name'>Name</h3>
+
+<p><code>MUTE_CHANGED ()</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>MUTE</td>
+<td>BOOL</td>
+<td>True/False</td>
+</tr>
+<tr>
+<td>OUTPUT</td>
+<td>INT</td>
+<td>Indicates a change in mute state for the specified output binding ID.</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-protocol-notifications-mute_changed-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='audio-video-switch-protocol-notifications-off'>OFF</h2>
+
+<p>Device has turned off.</p>
+
+<h3 id='audio-video-switch-protocol-notifications-off-name'>Name</h3>
+
+<p><code>OFF ()</code></p>
+
+<h3 id='audio-video-switch-protocol-notifications-off-parameter'>Parameter</h3>
+
+<p><code>None</code></p>
+
+<h3 id='audio-video-switch-protocol-notifications-off-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='audio-video-switch-protocol-notifications-on'>ON</h2>
+
+<p>Device has turned on.</p>
+
+<h3 id='audio-video-switch-protocol-notifications-on-name'>Name</h3>
+
+<p><code>ON ()</code></p>
+
+<h3 id='audio-video-switch-protocol-notifications-on-parameter'>Parameter</h3>
+
+<p><code>None</code></p>
+
+<h3 id='audio-video-switch-protocol-notifications-on-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='audio-video-switch-protocol-notifications-treble_level_changed'>TREBLE_LEVEL_CHANGED</h2>
+
+<p>Selected treble level has changed.</p>
+
+<h3 id='audio-video-switch-protocol-notifications-treble_level_changed-name'>Name</h3>
+
+<p><code>TREBLE_LEVEL_CHANGED ()</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>LEVEL</td>
+<td>INT</td>
+<td>Level</td>
+</tr>
+<tr>
+<td>OUTPUT</td>
+<td>INT</td>
+<td>Output Binding ID</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-protocol-notifications-treble_level_changed-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='audio-video-switch-protocol-notifications-volume_level_changed'>VOLUME_LEVEL_CHANGED</h2>
+
+<p>Selected volume level has changed.</p>
+
+<h3 id='audio-video-switch-protocol-notifications-volume_level_changed-name'>Name</h3>
+
+<p><code>VOLUME_LEVEL_CHANGED ()</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>LEVEL</td>
+<td>INT</td>
+<td>Level</td>
+</tr>
+<tr>
+<td>OUTPUT</td>
+<td>INT</td>
+<td>Output Binding ID</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-protocol-notifications-volume_level_changed-returns'>Returns</h3>
+
+<p><code>None</code></p>
+<h1 id='audio-video-switch-navigator-eq'>Audio Video Switch Navigator EQ</h1>
+
+<h2 id='audio-video-switch-navigator-eq-introduction'>Introduction</h2>
+
+<p>The ability to display audio equalization controls on devices running Navigator was added in conjunction with Operating System 3.2.3. Currently, the only Proxies that support Navigator EQ controls are the Amplifier and AV Switch Proxies.</p>
+
+<p>The majority of the of the commands, notifications and capabilities defined here must be implemented in your driver to display EQ controls. Several commands are optional including SET_AUDIOMODE_BYPASS, SET_AUDIOMODE_EQ and SET_AUDIOMODE_TONECONTROL as these have been included to suspect legacy Audio Matrix Switches.</p>
+
+<p>Note that this functionality is disabled by default. The HIDE EQ FROM NAVS CHANGED notification must be sent with a value of False to enable the EQ functionality in Navigator.</p>
+
+<h2 id='audio-video-switch-navigator-eq-navigator-eq-proxy-commands'>Navigator EQ Proxy Commands</h2>
+
+<h2 id='audio-video-switch-navigator-eq-loudness_off'>LOUDNESS_OFF</h2>
+
+<p>Navigator EQ command called to set the loudness off for indicated output. The driver should notify proxy with the LOUDNESS_CHANGED notification of the new value.</p>
+
+<h3 id='audio-video-switch-navigator-eq-loudness_off-name'>Name</h3>
+
+<p><code>LOUDNESS_OFF</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>OutputBindingID</td>
+<td>INT</td>
+<td>Output Binding ID</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-navigator-eq-loudness_off-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='audio-video-switch-navigator-eq-loudness_on'>LOUDNESS_ON</h2>
+
+<p>Navigator EQ command called to set the loudness on for indicated output. The driver should notify proxy with the LOUDNESS_CHANGED notification of the new value.</p>
+
+<h3 id='audio-video-switch-navigator-eq-loudness_on-name'>Name</h3>
+
+<p><code>LOUDNESS_ON</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>OutputBindingID</td>
+<td>INT</td>
+<td>Output Binding ID</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-navigator-eq-loudness_on-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='audio-video-switch-navigator-eq-set_audiomode_bypass'>SET_AUDIOMODE_BYPASS</h2>
+
+<p>Navigator EQ command called to change the output&#39;s mode to BYPASS. This is an optional command and should be used only if your device needs to switch modes.</p>
+
+<h3 id='audio-video-switch-navigator-eq-set_audiomode_bypass-name'>Name</h3>
+
+<p><code>SET_AUDIOMODE_BYPASS</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>int</td>
+<td>OUTPUT: OutputBindingID</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-navigator-eq-set_audiomode_bypass-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='audio-video-switch-navigator-eq-set_audiomode_eq'>SET_AUDIOMODE_EQ</h2>
+
+<p>Navigator EQ command called to change the output&#39;s mode to EQUALIZER. This is an optional command and should be used only if your device needs to switch modes.</p>
+
+<h3 id='audio-video-switch-navigator-eq-set_audiomode_eq-name'>Name</h3>
+
+<p><code>SET_AUDIOMODE_EQ</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>int</td>
+<td>OUTPUT: OutputBindingID</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-navigator-eq-set_audiomode_eq-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='audio-video-switch-navigator-eq-set_audiomode_tonecontrol'>SET_AUDIOMODE_TONECONTROL</h2>
+
+<p>Navigator EQ command called to change the output&#39;s mode to TONE_CONTROL. This is an optional command and should be used only if your device needs to switch modes.</p>
+
+<h3 id='audio-video-switch-navigator-eq-set_audiomode_tonecontrol-name'>Name</h3>
+
+<p><code>SET_AUDIOMODE_TONECONTROL</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>int</td>
+<td>OUTPUT: OutputBindingID</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-navigator-eq-set_audiomode_tonecontrol-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='audio-video-switch-navigator-eq-save_eq_to_custom_preset'>SAVE_EQ_TO_CUSTOM_PRESET</h2>
+
+<p>Navigator EQ command called to save the current EQ values to a custom preset with a name. The driver should notify proxy with the EQ_NAMES_CHANGED notification with the updated name.</p>
+
+<h3 id='audio-video-switch-navigator-eq-save_eq_to_custom_preset-name'>Name</h3>
+
+<p><code>SAVE_EQ_TO_CUSTOM_PRESET</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td></td>
+<td>INT</td>
+<td>Zero based custom preset index value used to save the custom preset.  The index range is from 0 to the number of custom presets defined in the <code>&lt;eq_preset_nav_count&gt;</code> capability, minus one due to the range being zero-based.</td>
+</tr>
+<tr>
+<td></td>
+<td>STR</td>
+<td>Name for the new custom index.  Base64 encoded.</td>
+</tr>
+<tr>
+<td>OutputBindingID</td>
+<td>INT</td>
+<td>OutputBindingID</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-navigator-eq-save_eq_to_custom_preset-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='audio-video-switch-navigator-eq-set_bass_level'>SET_BASS_LEVEL</h2>
+
+<p>Navigator EQ command called to set the bass level for tone control. The driver should notify proxy with the  BASS_LEVEL_CHANGED notification of the new value.</p>
+
+<h3 id='audio-video-switch-navigator-eq-set_bass_level-name'>Name</h3>
+
+<p><code>SET_BASS_LEVEL</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>OutputBindingID</td>
+<td>INT</td>
+<td>Output Binding ID</td>
+</tr>
+<tr>
+<td>Level</td>
+<td>INT</td>
+<td>LEVEL: Bass level. range is -12 to 12</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-navigator-eq-set_bass_level-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='audio-video-switch-navigator-eq-set_eqpreset'>SET_EQPRESET</h2>
+
+<p>Navigator EQ command called to change the selected preset for an output.</p>
+
+<h3 id='audio-video-switch-navigator-eq-set_eqpreset-name'>Name</h3>
+
+<p><code>SET_EQPRESET</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>int</td>
+<td>INT</td>
+<td>Index for the selected preset.</td>
+</tr>
+<tr>
+<td>Output Binding ID</td>
+<td>INT</td>
+<td>Output Binding ID</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-navigator-eq-set_eqpreset-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='audio-video-switch-navigator-eq-set_eq_gain_values'>SET_EQ_GAIN_VALUES</h2>
+
+<p>Navigator EQ command called to set the current equalizer’s gain values.</p>
+
+<h3 id='audio-video-switch-navigator-eq-set_eq_gain_values-name'>Name</h3>
+
+<p><code>SET_EQ_GAIN_VALUES</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td></td>
+<td>STR</td>
+<td>Comma delimited string of updated numeric gain values, one value per band.</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-navigator-eq-set_eq_gain_values-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='audio-video-switch-navigator-eq-set_treble_level'>SET_TREBLE_LEVEL</h2>
+
+<p>Navigator EQ command called to set the treble level for tone control. The driver should notify the proxy with TREBLE_LEVEL_CHANGED notification of the new value.</p>
+
+<h3 id='audio-video-switch-navigator-eq-set_treble_level-name'>Name</h3>
+
+<p><code>SET_TREBLE_LEVEL</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>int</td>
+<td>OUTPUT: OutputBindingID</td>
+</tr>
+<tr>
+<td>int</td>
+<td>LEVEL: Treble level. Range is -12 to 12.</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-navigator-eq-set_treble_level-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='audio-video-switch-navigator-eq-navigator-eq-protocol-notifications'>Navigator EQ Protocol Notifications</h2>
+
+<h2 id='audio-video-switch-navigator-eq-audiomode_changed'>AUDIOMODE_CHANGED</h2>
+
+<p>Navigator EQ notification that the output&#39;s audio mode has changed to either Tone Control or Equalizer for the output. This is an optional notification and should be used only if your device has audio modes. </p>
+
+<h3 id='audio-video-switch-navigator-eq-audiomode_changed-name'>Name</h3>
+
+<p><code>AUDIOMODE_CHANGED</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>OutputBindingID</td>
+<td>INT</td>
+<td>Output Binding ID</td>
+</tr>
+<tr>
+<td></td>
+<td>INT</td>
+<td>1 = TONE_CONTROL: This is sent when a Tone Control value is changed. 2 = EQUALIZER: This is sent when a EQ value is changed such as Treble or Bass.</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-navigator-eq-audiomode_changed-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='audio-video-switch-navigator-eq-balance_level_changed'>BALANCE_LEVEL_CHANGED</h2>
+
+<p>Navigator EQ notification that the balance has changed.</p>
+
+<h3 id='audio-video-switch-navigator-eq-balance_level_changed-name'>Name</h3>
+
+<p><code>BALANCE_LEVEL_CHANGED</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>OutputBindingID</td>
+<td>INT</td>
+<td>Output Binding ID</td>
+</tr>
+<tr>
+<td>Level</td>
+<td>INT</td>
+<td>Range is 0 to 100</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-navigator-eq-balance_level_changed-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h3 id='audio-video-switch-navigator-eq-balance_level_changed-example'>Example</h3><div class="highlight"><pre class="highlight lua tab-lua"><code><span class="c1">-- Notify Balance level is set to 'Full Left' for Output 3 (Binding ID 4002)</span>
+<span class="n">C4</span><span class="p">:</span><span class="n">SendToProxy</span><span class="p">(</span><span class="mi">5001</span><span class="p">,</span> <span class="s2">"BALANCE_LEVEL_CHANGED"</span><span class="p">,</span> <span class="p">{</span> <span class="n">OUTPUT</span> <span class="o">=</span> <span class="s2">"4002"</span><span class="p">,</span> <span class="n">LEVEL</span> <span class="o">=</span> <span class="mi">0</span> <span class="p">},</span> <span class="s2">"NOTIFY"</span><span class="p">)</span>
+
+
+
+<span class="c1">-- Notify Balance level is set to 'Center' for Output 3 (Binding ID 4002)</span>
+<span class="n">C4</span><span class="p">:</span><span class="n">SendToProxy</span><span class="p">(</span><span class="mi">5001</span><span class="p">,</span> <span class="s2">"BALANCE_LEVEL_CHANGED"</span><span class="p">,</span> <span class="p">{</span> <span class="n">OUTPUT</span> <span class="o">=</span> <span class="s2">"4002"</span><span class="p">,</span> <span class="n">LEVEL</span> <span class="o">=</span> <span class="mi">50</span> <span class="p">},</span> <span class="s2">"NOTIFY"</span><span class="p">)</span>
+
+
+
+<span class="c1">-- Notify Balance level is set to 'Full Right' for Output 3 (Binding ID 4002)</span>
+<span class="n">C4</span><span class="p">:</span><span class="n">SendToProxy</span><span class="p">(</span><span class="mi">5001</span><span class="p">,</span> <span class="s2">"BALANCE_LEVEL_CHANGED"</span><span class="p">,</span> <span class="p">{</span> <span class="n">OUTPUT</span> <span class="o">=</span> <span class="s2">"4002"</span><span class="p">,</span> <span class="n">LEVEL</span> <span class="o">=</span> <span class="mi">100</span> <span class="p">},</span> <span class="s2">"NOTIFY"</span><span class="p">)</span>
+</code></pre></div>
+<h2 id='audio-video-switch-navigator-eq-bass_level_changed'>BASS_LEVEL_CHANGED</h2>
+<p>Navigator EQ notification that the bass has changed.</p>
+<h3 id='audio-video-switch-navigator-eq-bass_level_changed-name'>Name</h3>
+
+<p><code>BASS_LEVEL_CHANGED</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>int</td>
+<td>OUTPUT: OutputBindingID</td>
+</tr>
+<tr>
+<td>int</td>
+<td>LEVEL: New bass level. Range is -12 to 12.</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-navigator-eq-bass_level_changed-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h3 id='audio-video-switch-navigator-eq-bass_level_changed-example'>Example</h3><div class="highlight"><pre class="highlight lua tab-lua"><code><span class="c1">-- Notify Bass Level is at -6 for Output 3 (Binding ID 4002)</span>
+<span class="n">C4</span><span class="p">:</span><span class="n">SendToProxy</span><span class="p">(</span><span class="mi">5001</span><span class="p">,</span> <span class="s2">"BASS_LEVEL_CHANGED"</span><span class="p">,</span> <span class="p">{</span> <span class="n">OUTPUT</span> <span class="o">=</span> <span class="s2">"4002"</span><span class="p">,</span> <span class="n">LEVEL</span> <span class="o">=</span> <span class="o">-</span><span class="mi">6</span> <span class="p">},</span> <span class="s2">"NOTIFY"</span><span class="p">)</span> 
+
+<span class="c1">-- Notify Bass Level is at +6 for Output 3 (Binding ID 4002)</span>
+<span class="n">C4</span><span class="p">:</span><span class="n">SendToProxy</span><span class="p">(</span><span class="mi">5001</span><span class="p">,</span> <span class="s2">"BASS_LEVEL_CHANGED"</span><span class="p">,</span> <span class="p">{</span> <span class="n">OUTPUT</span> <span class="o">=</span> <span class="s2">"4002"</span><span class="p">,</span> <span class="n">LEVEL</span> <span class="o">=</span> <span class="mi">6</span> <span class="p">},</span> <span class="s2">"NOTIFY"</span><span class="p">)</span>
+</code></pre></div>
+<h2 id='audio-video-switch-navigator-eq-eq_display_order_changed'>EQ_DISPLAY_ORDER_CHANGED</h2>
+<p>Navigator EQ notification of the order that the names from EQ_NAMES_CHANGED should be presented to the user.</p>
+<h3 id='audio-video-switch-navigator-eq-eq_display_order_changed-name'>Name</h3>
+
+<p><code>EQ_DISPLAY_ORDER_CHANGED</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>OutputBindingID</td>
+<td>INT</td>
+<td>OutputBindingID</td>
+</tr>
+<tr>
+<td></td>
+<td>Table of indexes</td>
+<td>Table of indexes that represents display order of the names.  Note that any programming for selecting a preset will be INDEX based, not name based.  Hence the names can be changed but the programming will be tied to the index at time of creation.</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-navigator-eq-eq_display_order_changed-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h3 id='audio-video-switch-navigator-eq-eq_display_order_changed-example'>Example</h3><div class="highlight"><pre class="highlight lua tab-lua"><code><span class="n">C4</span><span class="p">:</span><span class="n">SendToProxy</span><span class="p">(</span><span class="mi">5001</span><span class="p">,</span> <span class="s2">"EQ_DISPLAY_ORDER_CHANGED"</span><span class="p">,</span> <span class="p">{</span><span class="err">​​​​​​​</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span> <span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="n">OUTPUT</span> <span class="o">=</span> <span class="s2">"4002"</span> <span class="p">}</span><span class="err">​​​​​​​</span><span class="p">,</span> <span class="s2">"NOTIFY"</span><span class="p">)</span>
+
+<span class="n">C4</span><span class="p">:</span><span class="n">SendToProxy</span><span class="p">(</span><span class="mi">5001</span><span class="p">,</span> <span class="s2">"EQ_DISPLAY_ORDER_CHANGED"</span><span class="p">,</span> <span class="p">{</span><span class="err">​​​​​​​</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="n">OUTPUT</span> <span class="o">=</span> <span class="s2">"4002"</span> <span class="p">}</span><span class="err">​​​​​​​</span><span class="p">,</span> <span class="s2">"NOTIFY"</span><span class="p">)</span>
+</code></pre></div>
+<h2 id='audio-video-switch-navigator-eq-eq_names_changed'>EQ_NAMES_CHANGED</h2>
+<p>Navigator EQ notification of the current names for the equalizer presets.</p>
+<h3 id='audio-video-switch-navigator-eq-eq_names_changed-name'>Name</h3>
+
+<p><code>EQ_NAMES_CHANGED</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>OutputBindingID</td>
+<td>INT</td>
+<td>OutputBindingID</td>
+</tr>
+<tr>
+<td></td>
+<td>Table of names</td>
+<td>Table of names</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-navigator-eq-eq_names_changed-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h3 id='audio-video-switch-navigator-eq-eq_names_changed-example'>Example</h3><div class="highlight"><pre class="highlight lua tab-lua"><code><span class="n">C4</span><span class="p">:</span><span class="n">SendToProxy</span><span class="p">(</span><span class="mi">5001</span><span class="p">,</span> <span class="s2">"EQ_NAMES_CHANGED"</span><span class="p">,</span> <span class="p">{</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"FLAT"</span><span class="p">,</span> <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"CLASSICAL"</span><span class="p">,</span> <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"JAZZ"</span><span class="p">,</span> <span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"POP"</span><span class="p">,</span>   <span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"ROCK"</span><span class="p">,</span> <span class="n">OUTPUT</span> <span class="o">=</span> <span class="s2">"4002"</span> <span class="p">},</span> <span class="s2">"NOTIFY"</span><span class="p">)</span>
+
+<span class="n">C4</span><span class="p">:</span><span class="n">SendToProxy</span><span class="p">(</span><span class="mi">5001</span><span class="p">,</span> <span class="s2">"EQ_NAMES_CHANGED"</span><span class="p">,</span> <span class="p">{</span><span class="s2">"FLAT"</span><span class="p">,</span> <span class="s2">"CLASSICAL"</span><span class="p">,</span> <span class="s2">"JAZZ"</span><span class="p">,</span> <span class="s2">"POP"</span><span class="p">,</span> <span class="s2">"ROCK"</span><span class="p">,</span> <span class="n">OUTPUT</span> <span class="o">=</span> <span class="mi">4002</span><span class="p">},</span> <span class="s2">"NOTIFY"</span><span class="p">)</span>
+</code></pre></div>
+<h2 id='audio-video-switch-navigator-eq-eq_freqs_changed'>EQ_FREQS_CHANGED</h2>
+<p>Navigator EQ notification that the frequencies of a equalizer have been modified.</p>
+<h3 id='audio-video-switch-navigator-eq-eq_freqs_changed-name'>Name</h3>
+
+<p><code>EQFREQS_CHANGED</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>OutputBindingID</td>
+<td>INT</td>
+<td>OutputBindingID</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>Table of comma delimited frequencies.</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-navigator-eq-eq_freqs_changed-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h3 id='audio-video-switch-navigator-eq-eq_freqs_changed-example'>Example</h3><div class="highlight"><pre class="highlight lua tab-lua"><code><span class="c1">-- Notify Gains and Frequencies for EQ Bands for Output 3 (Binding ID 4002)</span>
+<span class="n">C4</span><span class="p">:</span><span class="n">SendToProxy</span><span class="p">(</span><span class="mi">5001</span><span class="p">,</span> <span class="s2">"EQGAINS_CHANGED"</span><span class="p">,</span> <span class="p">{</span> <span class="n">OUTPUT</span> <span class="o">=</span> <span class="s2">"4002"</span><span class="p">,</span> <span class="n">VALUES</span> <span class="o">=</span> <span class="s2">"7.5,3.8,5.4,4.59,7.8,7.4"</span> <span class="p">},</span> <span class="s2">"NOTIFY"</span><span class="p">)</span><span class="n">_</span>
+
+<span class="n">C4</span><span class="p">:</span><span class="n">SendToProxy</span><span class="p">(</span><span class="mi">5001</span><span class="p">,</span> <span class="s2">"EQFREQS_CHANGED"</span><span class="p">,</span> <span class="p">{</span> <span class="n">OUTPUT</span> <span class="o">=</span> <span class="s2">"4002"</span><span class="p">,</span> <span class="n">VALUES</span> <span class="o">=</span> <span class="s2">"33,125,750,3000,8000,16000"</span> <span class="p">},</span> <span class="s2">"NOTIFY"</span><span class="p">)</span>
+</code></pre></div>
+<h2 id='audio-video-switch-navigator-eq-eq_gains_changed'>EQ_GAINS_CHANGED</h2>
+<p>Navigator EQ notification that the gains of an equalizer have been modified.</p>
+<h3 id='audio-video-switch-navigator-eq-eq_gains_changed-name'>Name</h3>
+
+<p><code>EQGAINS_CHANGED</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>OUTPUT</td>
+<td>INT</td>
+<td>Output Binding ID. Notifies that the EQ band gain values have been updated for the specified output.</td>
+</tr>
+<tr>
+<td>VALUES</td>
+<td>STR</td>
+<td>VALUES: Comma delimited list of current equalizer values.</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-navigator-eq-eq_gains_changed-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h3 id='audio-video-switch-navigator-eq-eq_gains_changed-example'>Example</h3><div class="highlight"><pre class="highlight lua tab-lua"><code><span class="c1">-- Notify Gains and Frequencies for EQ Bands for Output 3 (Binding ID 4002)</span>
+<span class="n">C4</span><span class="p">:</span><span class="n">SendToProxy</span><span class="p">(</span><span class="mi">5001</span><span class="p">,</span> <span class="s2">"EQGAINS_CHANGED"</span><span class="p">,</span> <span class="p">{</span> <span class="n">OUTPUT</span> <span class="o">=</span> <span class="s2">"4002"</span><span class="p">,</span> <span class="n">VALUES</span> <span class="o">=</span> <span class="s2">"7.5,3.8,5.4,4.59,7.8,7.4"</span> <span class="p">},</span> <span class="s2">"NOTIFY"</span><span class="p">)</span><span class="n">_</span>
+
+<span class="n">C4</span><span class="p">:</span><span class="n">SendToProxy</span><span class="p">(</span><span class="mi">5001</span><span class="p">,</span> <span class="s2">"EQFREQS_CHANGED"</span><span class="p">,</span> <span class="p">{</span> <span class="n">OUTPUT</span> <span class="o">=</span> <span class="s2">"4002"</span><span class="p">,</span> <span class="n">VALUES</span> <span class="o">=</span> <span class="s2">"33,125,750,3000,8000,16000"</span> <span class="p">},</span> <span class="s2">"NOTIFY"</span><span class="p">)</span>
+</code></pre></div>
+<h2 id='audio-video-switch-navigator-eq-eq_preset_changed'>EQ_PRESET_CHANGED</h2>
+<p>Navigator EQ notification used when a different preset is selected for an output.  Should be called after SET_EQPRESET is sent or if the preset is changed from a different event. </p>
+<h3 id='audio-video-switch-navigator-eq-eq_preset_changed-name'>Name</h3>
+
+<p><code>EQPRESET_CHANGED</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Output</td>
+<td>INT</td>
+<td>Output Binding ID. Selects a specific EQ preset for the associated output.</td>
+</tr>
+<tr>
+<td>EQPRESET</td>
+<td>INT</td>
+<td>QPRESET: Newly selected equalizer index. Range is 0 to maximum number defined in the  <code>&lt;eq_preset_nav_count&gt;</code> capability.</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-navigator-eq-eq_preset_changed-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h3 id='audio-video-switch-navigator-eq-eq_preset_changed-example'>Example</h3><div class="highlight"><pre class="highlight lua tab-lua"><code><span class="c1">-- Notify change of current EQ Preset for Output 3 (Binding ID 4002)</span>
+<span class="n">C4</span><span class="p">:</span><span class="n">SendToProxy</span><span class="p">(</span><span class="mi">5001</span><span class="p">,</span> <span class="s2">"EQPRESET_CHANGED"</span><span class="p">,</span> <span class="p">{</span> <span class="n">OUTPUT</span> <span class="o">=</span> <span class="s2">"4002"</span><span class="p">,</span> <span class="n">EQPRESET</span> <span class="o">=</span> <span class="mi">2</span> <span class="p">},</span> <span class="s2">"NOTIFY"</span><span class="p">)</span>
+</code></pre></div>
+<h2 id='audio-video-switch-navigator-eq-hide_eq_from-_navs_changed'>HIDE_EQ_FROM _NAVS_CHANGED</h2>
+<p>Navigator EQ notification that the equalizer should be shown or hidden from Navigator. This must be sent with a value of False to enable the EQ functionality in Navigator.</p>
+<h3 id='audio-video-switch-navigator-eq-hide_eq_from-_navs_changed-name'>Name</h3>
+
+<p><code>HIDEEQFROMNAVS_CHANGED</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Output</td>
+<td>INT</td>
+<td>OutputBinding ID</td>
+</tr>
+<tr>
+<td>ENABLED</td>
+<td>BOOL</td>
+<td>ENABLED: True to hide this output from Navigators. False to allow output eq controls to be shown.  Default is True.</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-navigator-eq-hide_eq_from-_navs_changed-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h3 id='audio-video-switch-navigator-eq-hide_eq_from-_navs_changed-example'>Example</h3><div class="highlight"><pre class="highlight lua tab-lua"><code><span class="c1">-- Notify Hide (or show) Navigator EQ for Output 3 (Binding ID 4002)</span>
+<span class="n">C4</span><span class="p">:</span><span class="n">SendToProxy</span><span class="p">(</span><span class="mi">5001</span><span class="p">,</span> <span class="s2">"HIDEEQFROMNAVS_CHANGED"</span><span class="p">,</span> <span class="p">{</span> <span class="n">OUTPUT</span> <span class="o">=</span> <span class="s2">"4002"</span><span class="p">,</span> <span class="n">ENABLED</span> <span class="o">=</span> <span class="kc">false</span> <span class="p">},</span> <span class="s2">"NOTIFY"</span><span class="p">)</span>
+</code></pre></div>
+<h2 id='audio-video-switch-navigator-eq-loudness_changed'>LOUDNESS_CHANGED</h2>
+<p>Navigator EQ notification that the loudness has changed.</p>
+<h3 id='audio-video-switch-navigator-eq-loudness_changed-name'>Name</h3>
+
+<p><code>LOUDNESS_CHANGED</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>int</td>
+<td>OUTPUT: OutputBindingID</td>
+</tr>
+<tr>
+<td>bool</td>
+<td>ENABLED: LOUDNESS: True for loudness on, False for loudness off.</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-navigator-eq-loudness_changed-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='audio-video-switch-navigator-eq-treble_level_changed'>TREBLE_LEVEL_CHANGED</h2>
+
+<p>Navigator EQ notification that the treble level has changed.</p>
+
+<h3 id='audio-video-switch-navigator-eq-treble_level_changed-name'>Name</h3>
+
+<p><code>TREBLE_LEVEL_CHANGED</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>int</td>
+<td>OUTPUT: OutputBindingID</td>
+</tr>
+<tr>
+<td>int</td>
+<td>LEVEL: LOUDNESS: New treble level. Range is -12 to 12.</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-navigator-eq-treble_level_changed-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<p><h3 id='audio-video-switch-navigator-eq-treble_level_changed-example'>Example</h3><div class="highlight"><pre class="highlight lua tab-lua"><code><span class="c1">-- Notify Treble Level is at -6 for Output 3 (Binding ID 4002)</span>
+<span class="n">C4</span><span class="p">:</span><span class="n">SendToProxy</span><span class="p">(</span><span class="mi">5001</span><span class="p">,</span> <span class="s2">&quot;TREBLE_LEVEL_CHANGED&quot;</span><span class="p">,</span> <span class="p">{</span> <span class="n">OUTPUT</span> <span class="o">=</span> <span class="s2">&quot;4002&quot;</span><span class="p">,</span> <span class="n">LEVEL</span> <span class="o">=</span> <span class="o">-</span><span class="mi">6</span> <span class="p">},</span> <span class="s2">&quot;NOTIFY&quot;</span><span class="p">)</span></p>
+
+<p><span class="c1">-- Notify Treble Level is at +6 for Output 3 (Binding ID 4002)</span>
+<span class="n">C4</span><span class="p">:</span><span class="n">SendToProxy</span><span class="p">(</span><span class="mi">5001</span><span class="p">,</span> <span class="s2">&quot;TREBLE_LEVEL_CHANGED&quot;</span><span class="p">,</span> <span class="p">{</span> <span class="n">OUTPUT</span> <span class="o">=</span> <span class="s2">&quot;4002&quot;</span><span class="p">,</span> <span class="n">LEVEL</span> <span class="o">=</span> <span class="mi">6</span> <span class="p">},</span> <span class="s2">&quot;NOTIFY&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h2 id='audio-video-switch-navigator-eq-navigator-eq-capabilities'>Navigator EQ Capabilities</h2>
+<p><strong>&lt;has_eq_preset_control&gt;&lt;/has_eq_preset_control&gt;</strong>: 
+Boolean capability where True indicates this device supports the navigator equalizer interface and should allow navigators to interact with equalizers.</p></p>
+
+<p><strong>&lt;eq_preset_nav_count&gt;&lt;/eq_preset_nav_count&gt;</strong>: 
+Capability that requires a count (integer) of the number of presets to be presented to the Navigators.</p>
+
+<p><strong>&lt;eq_band_nav_count&gt;&lt;/&lt;eq_band_nav_count&gt;</strong>: 
+Capability that requires a count (integer) of the number of adjustable bands for equalizer control.</p>
+
+<p><strong>&lt;use_tone_max_value&gt;&lt;/use_tone_max_value&gt;</strong>: 
+Capability that requires the max value (integer) for tone controls.</p>
+
+<p><strong>&lt;use_tone_min_value&gt;&lt;/use_tone_min_value&gt;</strong>: 
+Capability that requires the minimum value (integer) for tone controls.</p>
+<h1 id='audio-output-bindings-and-proxy-events'>Audio Output Bindings and Proxy Events</h1>
+
+<p>Note: Audio Output binding ID values defined in drivers written in conjunction with this Proxy must start with a binding value of 4000. The acceptable range for Audio Outputs is 4000 - 4999. However, if the first output binding ID value is not 4000, issues with Proxy Events firing correctly can be encountered.</p>
+
+<p>For a list of valid Binding ID values please see the <a href="https://snap-one.github.io/docs-driverworks-fundamentals/#connections">Connections</a> section of the DriverWorks Fundamentals Guide.</p>
+<h1 id='display-adjustable-av-switch-bindings'>Display Adjustable AV Switch Bindings</h1>
+
+<p>O.S. releases 3.3.0 and later provides the ability to hide AV Switch Bindings that are not in use. This feature has been provided to better manage the UI display in ComposerPro. This is especially useful for AV Switch devices that have a large number of bindings. Displaying all of the bindings for these devices can make the use of UI cumbersome.</p>
+
+<p><strong>Assumptions:</strong></p>
+
+<ul>
+<li>All applicable bindings are correctly defined in the driver’s XML.</li>
+<li>Driver developers already have the ability to create control bindings using <a href="https://snap-one.github.io/docs-driverworks-api/#miscellaneous-interface-adddynamicbinding">C4:AddDynamicBinding()</a></li>
+<li>The driver file specifies bindings to be hidden by the proxy through the use of a new XML element delivered in O.S. 3.3.0:  <code>&lt;ExtraInfo&gt;D2&lt;/ExtraInfo&gt;</code> <em>See below for more information.</em></li>
+<li>Resizing of the bindings list is possible only if a new capability delivered in O.S. 3.3.0 is set to true: <code>&lt;allow_dynamic_resize&gt;</code>  <em>See below for more information.</em></li>
+</ul>
+
+<p><strong>AV Switch Proxy Functionality Using Display Adjustable Bindings</strong></p>
+
+<ul>
+<li>Bindings that are bound and then unbound in ComposerPro will only be hidden after a Director restart.</li>
+<li>The Proxy will increase the amount of displayed bindings based on the last unhidden, bound binding. For example,  bindings 1 through 10 are all bound and unhidden. ComposerPro will display all of those bindings and in addition, binding 11 through 13 assuming they are also unhidden.</li>
+<li>The largest Binding amount will be shown ACROSS ALL SECTIONS at the same time.  For example, RX, TX, Audio, Video will all be expanded to the largest bound set of any of the section. If RX has 10 bound connections that means Audio will also display 10, regardless of binding status.</li>
+<li>The driver developer is responsible for handling the configuration use case of virtual director or when the device is not available and ensuring that the solution is documented and appropriate for these scenarios.</li>
+</ul>
+
+<p><strong>Driver XML to Support Hidden Bindings</strong></p>
+
+<p>To allow the AV Switch Proxy to auto hide/unhide a binding, the driver needs to have a new XML tag included in the each connection in the driver’s XML: <code>&lt;ExtraInfo&gt;D2&lt;/ExtraInfo&gt;</code>.</p>
+
+<p>The ExtraInfo tag must include the value of <code>D2</code> as the parameter for each connection. For example, see the XML for connection 3096 to the right.</p>
+
+<div class="highlight"><pre class="highlight xml tab-xml"><code><span class="nt">&lt;connection&gt;</span>
+     <span class="nt">&lt;id&gt;</span>3096<span class="nt">&lt;/id&gt;</span>
+     <span class="nt">&lt;type&gt;</span>6<span class="nt">&lt;/type&gt;</span>
+     <span class="nt">&lt;ExtraInfo&gt;</span>D2<span class="nt">&lt;/ExtraInfo&gt;</span>
+     <span class="nt">&lt;connectionname&gt;</span>TX 96<span class="nt">&lt;/connectionname&gt;</span>
+     <span class="nt">&lt;consumer&gt;</span>True<span class="nt">&lt;/consumer&gt;</span>
+<span class="nt">&lt;/connection&gt;</span>
+</code></pre></div>
+
+<p><strong> Capability to Support Hidden Bindings</strong></p>
+
+<p><strong>allow_dynamic_resize</strong></p>
+
+<p>Capability that allows for AV Switch bindings to be hidden in ComposerPro. Defaults to false.</p>
+
+<p><strong> Signature</strong></p>
+
+<p><code>&lt;allow_dynamic_resize&gt;false&lt;/allow_dynamic_resize&gt;</code></p>
+
+<p><strong>Additional Information and Expected Limitations</strong></p>
+
+<ul>
+<li>The driver developer is responsible for persisting and recreating any non-binding connections when director starts up.</li>
+<li>The driver developer must recreate the bindings in the proper order before director loads and creates the connection. This is done by the driver developer by persisting the binding information and creating the bindings on execution of the main driver code.</li>
+<li>The driver must handle the &quot;virtual&quot; or device not available case appropriately based on the expected use case for configuring the device. If the connections aren&#39;t defined in xml, and the device isn&#39;t available, the installer may have a limited experience. The driver developer needs to take this into consideration.</li>
+</ul>
+<h1 id='audio-video-switch-proxy-commands'>Audio Video Switch Proxy Commands</h1>
+
+<h2 id='audio-video-switch-proxy-commands-back'>BACK</h2>
+
+<p>Pulse Back button.</p>
+
+<h3 id='audio-video-switch-proxy-commands-back-name'>Name</h3>
+
+<p><code>BACK ()</code></p>
+
+<h3 id='audio-video-switch-proxy-commands-back-parameters'>Parameters</h3>
+
+<p><code>None</code></p>
+
+<h3 id='audio-video-switch-proxy-commands-back-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='audio-video-switch-proxy-commands-cancel'>CANCEL</h2>
+
+<p>Pulse Cancel button</p>
+
+<h3 id='audio-video-switch-proxy-commands-cancel-name'>Name</h3>
+
+<p><code>CANCEL ()</code></p>
+
+<h3 id='audio-video-switch-proxy-commands-cancel-parameters'>Parameters</h3>
+
+<p><code>None</code></p>
+
+<h3 id='audio-video-switch-proxy-commands-cancel-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='audio-video-switch-proxy-commands-connect_output'>CONNECT_OUTPUT</h2>
+
+<p>Numerical value of the output. Switch the output to passed ID.</p>
+
+<h3 id='audio-video-switch-proxy-commands-connect_output-name'>Name</h3>
+
+<p><code>CONNECT OUTPUT ()</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>int</td>
+<td>Output Binding ID</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-proxy-commands-connect_output-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h3 id='audio-video-switch-proxy-commands-connect_output-usage-note'>Usage Note</h3>
+
+<p>Preface band width tuner capability must be used in the driver for the CONNECT OUTPUT command to be set.</p>
+
+<h2 id='audio-video-switch-proxy-commands-dash'>DASH</h2>
+
+<p>Pulses the ‘-’ button.</p>
+
+<h3 id='audio-video-switch-proxy-commands-dash-name'>Name</h3>
+
+<p><code>DASH ()</code></p>
+
+<p>Parameter </p>
+
+<p><code>None</code></p>
+
+<h3 id='audio-video-switch-proxy-commands-dash-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='audio-video-switch-proxy-commands-disconnect_output'>DISCONNECT_OUTPUT</h2>
+
+<p>Disconnect (turn off) selected output on device.</p>
+
+<h3 id='audio-video-switch-proxy-commands-disconnect_output-name'>Name</h3>
+
+<p><code>DISCONNECT_OUTPUT ()</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>OUTPUT</td>
+<td>INT</td>
+<td>Output BindingID</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-proxy-commands-disconnect_output-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='audio-video-switch-proxy-commands-emit_code'>EMIT_CODE</h2>
+
+<p>Emit IR/Serial code (used by AVGen IR/Serial Proxy).</p>
+
+<h3 id='audio-video-switch-proxy-commands-emit_code-name'>Name</h3>
+
+<p><code>EMIT_CODE ()</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>STR</td>
+<td>ID OF IR Code</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-proxy-commands-emit_code-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='audio-video-switch-proxy-commands-emit_macro'>EMIT_MACRO</h2>
+
+<p>Emit IR/Serial code macro (used by AVGen IR/Serial Proxy)</p>
+
+<h3 id='audio-video-switch-proxy-commands-emit_macro-name'>Name</h3>
+
+<p><code>EMIT_MACRO ()</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>str</td>
+<td>MacroCodeName</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-proxy-commands-emit_macro-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='audio-video-switch-proxy-commands-get_audio_inputs'>GET_AUDIO_INPUTS</h2>
+
+<p>Command sent to the protocol during the proxy initialization. Returns available audio inputs from the protocol device.</p>
+
+<h3 id='audio-video-switch-proxy-commands-get_audio_inputs-name'>Name</h3>
+
+<p><code>GET_AUDIO_INPUTS ()</code></p>
+
+<h3 id='audio-video-switch-proxy-commands-get_audio_inputs-parameters'>Parameters</h3>
+
+<p><code>None</code></p>
+
+<h3 id='audio-video-switch-proxy-commands-get_audio_inputs-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='audio-video-switch-proxy-commands-hyphen'>HYPHEN</h2>
+
+<p>Pulse ‘-’ button</p>
+
+<h3 id='audio-video-switch-proxy-commands-hyphen-name'>Name</h3>
+
+<p><code>HYPHEN ()</code></p>
+
+<h3 id='audio-video-switch-proxy-commands-hyphen-parameters'>Parameters</h3>
+
+<p><code>None</code></p>
+
+<h3 id='audio-video-switch-proxy-commands-hyphen-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='audio-video-switch-proxy-commands-info'>INFO</h2>
+
+<p>Pulse Info button</p>
+
+<h3 id='audio-video-switch-proxy-commands-info-name'>Name</h3>
+
+<p><code>INFO ()</code></p>
+
+<h3 id='audio-video-switch-proxy-commands-info-parameters'>Parameters</h3>
+
+<p><code>None</code></p>
+
+<h3 id='audio-video-switch-proxy-commands-info-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='audio-video-switch-proxy-commands-loudness_off'>LOUDNESS_OFF</h2>
+
+<p>Turn loudness off.</p>
+
+<h3 id='audio-video-switch-proxy-commands-loudness_off-name'>Name</h3>
+
+<p><code>LOUDNESS_OFF ()</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>OUTPUT</td>
+<td>INT</td>
+<td>Output BindingID</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-proxy-commands-loudness_off-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='audio-video-switch-proxy-commands-loudness_on'>LOUDNESS_ON</h2>
+
+<p>Turn loudness on.</p>
+
+<h3 id='audio-video-switch-proxy-commands-loudness_on-name'>Name</h3>
+
+<p><code>LOUDNESS_ON ()</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>OUTPUT</td>
+<td>INT</td>
+<td>Output BindingID</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-proxy-commands-loudness_on-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='audio-video-switch-proxy-commands-loudness_toggle'>LOUDNESS_TOGGLE</h2>
+
+<p>Toggle loudness on/off.</p>
+
+<h3 id='audio-video-switch-proxy-commands-loudness_toggle-name'>Name</h3>
+
+<p><code>LOUDNESS_TOGGLE ()</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>OUTPUT</td>
+<td>INT</td>
+<td>Output BindingID</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-proxy-commands-loudness_toggle-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='audio-video-switch-proxy-commands-mute_off'>MUTE_OFF</h2>
+
+<p>Turn muting off.</p>
+
+<h3 id='audio-video-switch-proxy-commands-mute_off-name'>Name</h3>
+
+<p><code>MUTE_OFF ()</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>OUTPUT</td>
+<td>INT</td>
+<td>Output BindingID</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-proxy-commands-mute_off-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='audio-video-switch-proxy-commands-mute_on'>MUTE_ON</h2>
+
+<p>Turn muting on.</p>
+
+<h3 id='audio-video-switch-proxy-commands-mute_on-name'>Name</h3>
+
+<p><code>MUTE_ON ()</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>OUTPUT</td>
+<td>INT</td>
+<td>Output BindingID</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-proxy-commands-mute_on-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='audio-video-switch-proxy-commands-mute_toggle'>MUTE_TOGGLE</h2>
+
+<p>Toggle muting on/off.</p>
+
+<h3 id='audio-video-switch-proxy-commands-mute_toggle-name'>Name</h3>
+
+<p><code>MUTE_TOGGLE ()</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>OUTPUT</td>
+<td>INT</td>
+<td>Output BindingID</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-proxy-commands-mute_toggle-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='audio-video-switch-proxy-commands-number_0'>NUMBER_0</h2>
+
+<p>Pulse ‘0’ button</p>
+
+<h3 id='audio-video-switch-proxy-commands-number_0-name'>Name</h3>
+
+<p><code>Number_0 ()</code></p>
+
+<h3 id='audio-video-switch-proxy-commands-number_0-parameters'>Parameters</h3>
+
+<p><code>None</code></p>
+
+<h3 id='audio-video-switch-proxy-commands-number_0-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='audio-video-switch-proxy-commands-number_1'>NUMBER_1</h2>
+
+<p>Pulse ‘1’ button</p>
+
+<h3 id='audio-video-switch-proxy-commands-number_1-name'>Name</h3>
+
+<p><code>Number_1 ()</code></p>
+
+<h3 id='audio-video-switch-proxy-commands-number_1-parameters'>Parameters</h3>
+
+<p><code>None</code></p>
+
+<h3 id='audio-video-switch-proxy-commands-number_1-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='audio-video-switch-proxy-commands-number_2'>NUMBER_2</h2>
+
+<p>Pulse ‘2’ button</p>
+
+<h3 id='audio-video-switch-proxy-commands-number_2-name'>Name</h3>
+
+<p><code>Number_2 ()</code></p>
+
+<h3 id='audio-video-switch-proxy-commands-number_2-parameters'>Parameters</h3>
+
+<p><code>None</code></p>
+
+<h3 id='audio-video-switch-proxy-commands-number_2-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='audio-video-switch-proxy-commands-number_3'>NUMBER_3</h2>
+
+<p>Pulse ‘3’ button</p>
+
+<h3 id='audio-video-switch-proxy-commands-number_3-name'>Name</h3>
+
+<p><code>Number_3 ()</code></p>
+
+<h3 id='audio-video-switch-proxy-commands-number_3-parameters'>Parameters</h3>
+
+<p><code>None</code></p>
+
+<h3 id='audio-video-switch-proxy-commands-number_3-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='audio-video-switch-proxy-commands-number_4'>NUMBER_4</h2>
+
+<p>Pulse ‘4’ button</p>
+
+<h3 id='audio-video-switch-proxy-commands-number_4-namesignature'>NameSignature</h3>
+
+<p><code>Number_4 ()</code></p>
+
+<h3 id='audio-video-switch-proxy-commands-number_4-parameters'>Parameters</h3>
+
+<p><code>None</code></p>
+
+<h3 id='audio-video-switch-proxy-commands-number_4-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='audio-video-switch-proxy-commands-number_5'>NUMBER_5</h2>
+
+<p>Pulse ‘5’ button</p>
+
+<h3 id='audio-video-switch-proxy-commands-number_5-name'>Name</h3>
+
+<p><code>Number_5 ()</code></p>
+
+<h3 id='audio-video-switch-proxy-commands-number_5-parameters'>Parameters</h3>
+
+<p><code>None</code></p>
+
+<h3 id='audio-video-switch-proxy-commands-number_5-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='audio-video-switch-proxy-commands-number_6'>NUMBER_6</h2>
+
+<p>Pulse ‘6’ button</p>
+
+<h3 id='audio-video-switch-proxy-commands-number_6-name'>Name</h3>
+
+<p><code>Number_6 ()</code></p>
+
+<h3 id='audio-video-switch-proxy-commands-number_6-parameters'>Parameters</h3>
+
+<p><code>None</code></p>
+
+<h3 id='audio-video-switch-proxy-commands-number_6-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='audio-video-switch-proxy-commands-number_7'>NUMBER_7</h2>
+
+<p>Pulse ‘7’ button</p>
+
+<h3 id='audio-video-switch-proxy-commands-number_7-name'>Name</h3>
+
+<p><code>Number_7 ()</code></p>
+
+<h3 id='audio-video-switch-proxy-commands-number_7-parameters'>Parameters</h3>
+
+<p><code>None</code></p>
+
+<h3 id='audio-video-switch-proxy-commands-number_7-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='audio-video-switch-proxy-commands-number_8'>NUMBER_8</h2>
+
+<p>Pulse ‘8’ button</p>
+
+<h3 id='audio-video-switch-proxy-commands-number_8-name'>Name</h3>
+
+<p><code>Number_8 ()</code></p>
+
+<h3 id='audio-video-switch-proxy-commands-number_8-parameters'>Parameters</h3>
+
+<p><code>None</code></p>
+
+<h3 id='audio-video-switch-proxy-commands-number_8-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='audio-video-switch-proxy-commands-number_9'>NUMBER_9</h2>
+
+<p>Pulse ‘9’ button</p>
+
+<h3 id='audio-video-switch-proxy-commands-number_9-name'>Name</h3>
+
+<p><code>Number_9 ()</code></p>
+
+<h3 id='audio-video-switch-proxy-commands-number_9-parameters'>Parameters</h3>
+
+<p><code>None</code></p>
+
+<h3 id='audio-video-switch-proxy-commands-number_9-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='audio-video-switch-proxy-commands-off'>OFF</h2>
+
+<p>Turn device Off.</p>
+
+<h3 id='audio-video-switch-proxy-commands-off-name'>Name</h3>
+
+<p><code>OFF ()</code></p>
+
+<h3 id='audio-video-switch-proxy-commands-off-parameters'>Parameters</h3>
+
+<p><code>None</code></p>
+
+<h3 id='audio-video-switch-proxy-commands-off-usage-note'>Usage Note</h3>
+
+<p>The ON and OFF proxy commands have the ability to send proxy notifications to display a device power state in Composer and Navigator Devices only. Any desired commands or notifications based off the device ON/OFF state must be handled by your DriverWorks driver.</p>
+
+<h2 id='audio-video-switch-proxy-commands-on'>ON</h2>
+
+<p>Turn device On.</p>
+
+<h3 id='audio-video-switch-proxy-commands-on-name'>Name</h3>
+
+<p><code>ON ()</code></p>
+
+<h3 id='audio-video-switch-proxy-commands-on-parameters'>Parameters</h3>
+
+<p><code>None</code></p>
+
+<h3 id='audio-video-switch-proxy-commands-on-usage-note'>Usage Note</h3>
+
+<p>The ON and OFF proxy commands have the ability to send proxy notifications to display a device power state in Composer and Navigator Devices only. Any desired commands or notifications based off the device ON/OFF state must be handled by your DriverWorks driver.</p>
+
+<h2 id='audio-video-switch-proxy-commands-pound'>POUND</h2>
+
+<p>Pulse ‘#’ button</p>
+
+<h3 id='audio-video-switch-proxy-commands-pound-name'>Name</h3>
+
+<p><code>POUND ()</code></p>
+
+<h3 id='audio-video-switch-proxy-commands-pound-parameters'>Parameters</h3>
+
+<p><code>None</code></p>
+
+<h3 id='audio-video-switch-proxy-commands-pound-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='audio-video-switch-proxy-commands-pulse_balance_down'>PULSE_BALANCE_DOWN</h2>
+
+<p>Pulse balance down (Left)</p>
+
+<h3 id='audio-video-switch-proxy-commands-pulse_balance_down-name'>Name</h3>
+
+<p><code>PULSE_BALNCE_DOWN ()</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>OUTPUT</td>
+<td>INT</td>
+<td>Output BindingID</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-proxy-commands-pulse_balance_down-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='audio-video-switch-proxy-commands-pulse_balance_up'>PULSE_BALANCE_UP</h2>
+
+<p>Pulse balance up (Right)</p>
+
+<h3 id='audio-video-switch-proxy-commands-pulse_balance_up-name'>Name</h3>
+
+<p><code>PULSE_BALNCE_UP ()</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>OUTPUT</td>
+<td>INT</td>
+<td>Output BindingID</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-proxy-commands-pulse_balance_up-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='audio-video-switch-proxy-commands-pulse_bass_down'>PULSE_BASS_DOWN</h2>
+
+<p>Pulse bass down (Left)</p>
+
+<h3 id='audio-video-switch-proxy-commands-pulse_bass_down-name'>Name</h3>
+
+<p><code>PULSE_BASS_DOWN ()</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>OUTPUT</td>
+<td>INT</td>
+<td>Output BindingID</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-proxy-commands-pulse_bass_down-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='audio-video-switch-proxy-commands-pulse_bass_up'>PULSE_BASS_UP</h2>
+
+<p>Pulse bass up (Right)</p>
+
+<h3 id='audio-video-switch-proxy-commands-pulse_bass_up-name'>Name</h3>
+
+<p><code>PULSE_BASS_UP ()</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>OUTPUT</td>
+<td>INT</td>
+<td>Output BindingID</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-proxy-commands-pulse_bass_up-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='audio-video-switch-proxy-commands-pulse_input'>PULSE_INPUT</h2>
+
+<p>Toggle (cycle through) input selection on device.</p>
+
+<h3 id='audio-video-switch-proxy-commands-pulse_input-name'>Name</h3>
+
+<p><code>PULSE_INPUT</code></p>
+
+<h3 id='audio-video-switch-proxy-commands-pulse_input-parameters'>Parameters</h3>
+
+<p><code>None</code></p>
+
+<h3 id='audio-video-switch-proxy-commands-pulse_input-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='audio-video-switch-proxy-commands-pulse_sur_up'>PULSE_SUR_UP</h2>
+
+<p>Toggle (cycle through) surround mode presets on device.</p>
+
+<h3 id='audio-video-switch-proxy-commands-pulse_sur_up-name'>Name</h3>
+
+<p><code>PULSE_SUR_UP</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>OUTPUT</td>
+<td>INT</td>
+<td>Output BindingID</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-proxy-commands-pulse_sur_up-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='audio-video-switch-proxy-commands-pulse_vol_down'>PULSE_VOL_DOWN</h2>
+
+<p>Pulse volume level down.</p>
+
+<h3 id='audio-video-switch-proxy-commands-pulse_vol_down-name'>Name</h3>
+
+<p><code>PULSE_VOL_DOWN</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>OUTPUT</td>
+<td>INT</td>
+<td>Output BindingID</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-proxy-commands-pulse_vol_down-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='audio-video-switch-proxy-commands-pulse_vol_up'>PULSE_VOL_UP</h2>
+
+<p>Pulse volume level up.</p>
+
+<h3 id='audio-video-switch-proxy-commands-pulse_vol_up-name'>Name</h3>
+
+<p><code>PULSE_VOL_UP</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>OUTPUT</td>
+<td>INT</td>
+<td>Output BindingID</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-proxy-commands-pulse_vol_up-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='audio-video-switch-proxy-commands-pulse_treble_down'>PULSE_TREBLE_DOWN</h2>
+
+<p>Pulse treble down.</p>
+
+<h3 id='audio-video-switch-proxy-commands-pulse_treble_down-name'>Name</h3>
+
+<p><code>PULSE_TREBLE_DOWN ()</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>int</td>
+<td>Output Binding ID</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-proxy-commands-pulse_treble_down-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='audio-video-switch-proxy-commands-pulse_treble_up'>PULSE_TREBLE_UP</h2>
+
+<p>Pulse treble up.</p>
+
+<h3 id='audio-video-switch-proxy-commands-pulse_treble_up-name'>Name</h3>
+
+<p><code>PULSE_TREBLE_UP ()</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>OUTPUT</td>
+<td>INT</td>
+<td>Output BindingID</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-proxy-commands-pulse_treble_up-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='audio-video-switch-proxy-commands-recall'>RECALL</h2>
+
+<p>Pulse Recall button</p>
+
+<h3 id='audio-video-switch-proxy-commands-recall-name'>Name</h3>
+
+<p><code>RECALL ()</code></p>
+
+<h3 id='audio-video-switch-proxy-commands-recall-parameters'>Parameters</h3>
+
+<p><code>None</code></p>
+
+<h3 id='audio-video-switch-proxy-commands-recall-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='audio-video-switch-proxy-commands-set_balance'>SET_BALANCE</h2>
+
+<p>Set balance to a specified position.</p>
+
+<h3 id='audio-video-switch-proxy-commands-set_balance-name'>Name</h3>
+
+<p><code>SET_BALANCE ()</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>LEVEL</td>
+<td>INT</td>
+<td>Balance Level</td>
+</tr>
+<tr>
+<td>OUTPUT</td>
+<td>INT</td>
+<td>Output BindingID</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-proxy-commands-set_balance-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='audio-video-switch-proxy-commands-set_balance_up'>SET_BALANCE_UP</h2>
+
+<p>Set balance to a specified position.</p>
+
+<h3 id='audio-video-switch-proxy-commands-set_balance_up-name'>Name</h3>
+
+<p><code>SET_BALANCE_UP ()</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>LEVEL</td>
+<td>INT</td>
+<td>Balance Level</td>
+</tr>
+<tr>
+<td>OUTPUT</td>
+<td>INT</td>
+<td>Output BindingID</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-proxy-commands-set_balance_up-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='audio-video-switch-proxy-commands-set_bass_level'>SET_BASS_LEVEL</h2>
+
+<p>Set bass to a specified level.</p>
+
+<h3 id='audio-video-switch-proxy-commands-set_bass_level-name'>Name</h3>
+
+<p><code>SET_BASS_LEVEL</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>OUTPUT</td>
+<td>INT</td>
+<td>Output BindingID</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-proxy-commands-set_bass_level-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='audio-video-switch-proxy-commands-set_digi_off'>SET_DIGI_OFF</h2>
+
+<p>Used with the v.3 amp to turn digital inputs off.</p>
+
+<h3 id='audio-video-switch-proxy-commands-set_digi_off-name'>Name</h3>
+
+<p><code>SET_DIGI_OFF ()</code></p>
+
+<h3 id='audio-video-switch-proxy-commands-set_digi_off-parameters'>Parameters</h3>
+
+<p><code>None</code></p>
+
+<h3 id='audio-video-switch-proxy-commands-set_digi_off-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='audio-video-switch-proxy-commands-set_digi_on'>SET_DIGI_ON</h2>
+
+<p>Used with the v.3 amp to turn digital inputs on.</p>
+
+<h3 id='audio-video-switch-proxy-commands-set_digi_on-name'>Name</h3>
+
+<p><code>SET_DIGI_ON ()</code></p>
+
+<h3 id='audio-video-switch-proxy-commands-set_digi_on-parameters'>Parameters</h3>
+
+<p><code>None</code></p>
+
+<h3 id='audio-video-switch-proxy-commands-set_digi_on-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='audio-video-switch-proxy-commands-set_input'>SET_INPUT</h2>
+
+<p>Specify input selection of device.</p>
+
+<h3 id='audio-video-switch-proxy-commands-set_input-name'>Name</h3>
+
+<p><code>SET_INPUT ()</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>INPUT</td>
+<td>INT</td>
+<td>Input Binding ID - should be in the BindingID range below.</td>
+</tr>
+<tr>
+<td>OUTPUT</td>
+<td>INT</td>
+<td>Optional. Output Binding ID - should be in the BindingID range below.</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-proxy-commands-set_input-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h3 id='audio-video-switch-proxy-commands-set_input-usage-note'>Usage Note</h3>
+
+<ul>
+<li> Control Bindings = 1 -&gt; 999</li>
+<li>Video Inputs = 1000 -&gt; 1099</li>
+<li>Video Outputs = 2000 -&gt; 2999</li>
+<li>Audio Inputs = 3000 -&gt; 3099</li>
+<li>Audio Outputs = 4000 -&gt; 4999</li>
+<li>Proxy Bindings = 5000 -&gt; 5999</li>
+<li>Network Bindings = 6000 -&gt; 6999</li>
+<li>Room Bindings = 7000 -&gt; 7999</li>
+<li>Power Manager = 8000 -&gt; 8999</li>
+</ul>
+
+<h2 id='audio-video-switch-proxy-commands-set_loudness'>SET_LOUDNESS</h2>
+
+<p>Turn loudness on.</p>
+
+<h3 id='audio-video-switch-proxy-commands-set_loudness-name'>Name</h3>
+
+<p><code>SET_LOUDNESS ()</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>INPUT</td>
+<td>INT</td>
+<td>Input Binding ID - should be in the BindingID range below.</td>
+</tr>
+<tr>
+<td>OUTPUT</td>
+<td>INT</td>
+<td>Output Binding ID</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-proxy-commands-set_loudness-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='audio-video-switch-proxy-commands-set_output_input'>SET_OUTPUT_INPUT</h2>
+
+<p>Specify input and output selection of device.</p>
+
+<h3 id='audio-video-switch-proxy-commands-set_output_input-name'>Name</h3>
+
+<p><code>SET_OUTPUT_INPUT ()</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>INPUT</td>
+<td>INT</td>
+<td>Input Binding ID - should be in the BindingID range below.</td>
+</tr>
+<tr>
+<td>OUTPUT</td>
+<td>INT</td>
+<td>Output Binding ID</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-proxy-commands-set_output_input-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='audio-video-switch-proxy-commands-set_surround_mode'>SET_SURROUND_MODE</h2>
+
+<p>Select specified surround mode preset on device.</p>
+
+<h3 id='audio-video-switch-proxy-commands-set_surround_mode-name'>Name</h3>
+
+<p><code>SET_SURROUND_MODE ()</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>SURROUND\_MODE</td>
+<td>INT</td>
+<td>Surround Mode preset value.</td>
+</tr>
+<tr>
+<td>OUTPUT</td>
+<td>INT</td>
+<td>Output Binding ID</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-proxy-commands-set_surround_mode-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='audio-video-switch-proxy-commands-set_treble_level'>SET_TREBLE_LEVEL</h2>
+
+<p>Set treble to a specified level.</p>
+
+<h3 id='audio-video-switch-proxy-commands-set_treble_level-name'>Name</h3>
+
+<p><code>SET_TREBLE_LEVEL ()</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>LEVEL</td>
+<td>INT</td>
+<td>Treble Level</td>
+</tr>
+<tr>
+<td>OUTPUT</td>
+<td>INT</td>
+<td>Output Binding ID</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-proxy-commands-set_treble_level-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='audio-video-switch-proxy-commands-set_up_down_swap'>SET_UP_DOWN_SWAP</h2>
+
+<p>Swap page UP/DOWN buttons (used by AVGen)</p>
+
+<h3 id='audio-video-switch-proxy-commands-set_up_down_swap-name'>Name</h3>
+
+<p><code>SET_UP_DOWN_SWAP ()</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>SWAPFLAG</td>
+<td>BOOL</td>
+<td>Swap page UP/DOWN buttons (used by AVGen). <code>TRUE</code> to enable swap, <code>FALSE</code> to disable.</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-proxy-commands-set_up_down_swap-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='audio-video-switch-proxy-commands-stop_vol_down'>STOP_VOL_DOWN</h2>
+
+<p>Stop ramping volume down.</p>
+
+<h3 id='audio-video-switch-proxy-commands-stop_vol_down-name'>Name</h3>
+
+<p><code>SET_VOL_DOWN ()</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>LEVEL</td>
+<td>INT</td>
+<td>Level</td>
+</tr>
+<tr>
+<td>OUTPUT</td>
+<td>INT</td>
+<td>Output Binding ID</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-proxy-commands-stop_vol_down-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='audio-video-switch-proxy-commands-set_volume_level'>SET_VOLUME_LEVEL</h2>
+
+<p>Set volume to a specified level.</p>
+
+<h3 id='audio-video-switch-proxy-commands-set_volume_level-name'>Name</h3>
+
+<p><code>SET_VOLUME_LEVEL () </code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>int</td>
+<td>Level</td>
+</tr>
+<tr>
+<td>int</td>
+<td>Output Binding ID</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-proxy-commands-set_volume_level-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='audio-video-switch-proxy-commands-star'>STAR</h2>
+
+<p>Pulse <code>* </code> button</p>
+
+<h3 id='audio-video-switch-proxy-commands-star-name'>Name</h3>
+
+<p><code>STAR ()</code></p>
+
+<h3 id='audio-video-switch-proxy-commands-star-parameters'>Parameters</h3>
+
+<p><code>None</code></p>
+
+<h3 id='audio-video-switch-proxy-commands-star-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='audio-video-switch-proxy-commands-start_balance_down'>START_BALANCE_DOWN</h2>
+
+<p>Start ramping balance down (left).</p>
+
+<h3 id='audio-video-switch-proxy-commands-start_balance_down-name'>Name</h3>
+
+<p><code>START_BALANCE_DOWN ()</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>OUTPUT</td>
+<td>INT</td>
+<td>Output Binding ID</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-proxy-commands-start_balance_down-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='audio-video-switch-proxy-commands-start_bass_down'>START_BASS_DOWN</h2>
+
+<p>Start ramping bass down.</p>
+
+<h3 id='audio-video-switch-proxy-commands-start_bass_down-name'>Name</h3>
+
+<p><code>START_BASS_DOWN ()</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>OUTPUT</td>
+<td>INT</td>
+<td>Output Binding ID</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-proxy-commands-start_bass_down-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='audio-video-switch-proxy-commands-start_bass_up'>START_BASS_UP</h2>
+
+<p>Start ramping bass up.</p>
+
+<h3 id='audio-video-switch-proxy-commands-start_bass_up-name'>Name</h3>
+
+<p><code>START_BASS_UP ()</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>OUTPUT</td>
+<td>INT</td>
+<td>Output Binding ID</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-proxy-commands-start_bass_up-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='audio-video-switch-proxy-commands-start_treble_down'>START_TREBLE_DOWN</h2>
+
+<p>Start ramping treble down.</p>
+
+<h3 id='audio-video-switch-proxy-commands-start_treble_down-name'>Name</h3>
+
+<p><code>START_TREBLE_DOWN ()</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>OUTPUT</td>
+<td>INT</td>
+<td>Output Binding ID</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-proxy-commands-start_treble_down-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='audio-video-switch-proxy-commands-start_treble_up'>START_TREBLE_UP</h2>
+
+<p>Start ramping treble up.</p>
+
+<h3 id='audio-video-switch-proxy-commands-start_treble_up-name'>Name</h3>
+
+<p><code>START_TREBLE_UP ()</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>OUTPUT</td>
+<td>INT</td>
+<td>Output Binding ID</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-proxy-commands-start_treble_up-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='audio-video-switch-proxy-commands-start_vol_down'>START_VOL_DOWN</h2>
+
+<p>Start ramping volume down.</p>
+
+<h3 id='audio-video-switch-proxy-commands-start_vol_down-name'>Name</h3>
+
+<p><code>START_TREBLE_DOWN ()</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>OUTPUT</td>
+<td>INT</td>
+<td>Output Binding ID</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-proxy-commands-start_vol_down-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='audio-video-switch-proxy-commands-start_vol_up'>START_VOL_UP</h2>
+
+<p>Start ramping volume up.</p>
+
+<h3 id='audio-video-switch-proxy-commands-start_vol_up-name'>Name</h3>
+
+<p><code>START_VOL_UP ()</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>OUTPUT</td>
+<td>INT</td>
+<td>Output Binding ID</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-proxy-commands-start_vol_up-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='audio-video-switch-proxy-commands-stop_balance_down'>STOP_BALANCE_DOWN</h2>
+
+<p>Start ramping balance.</p>
+
+<h3 id='audio-video-switch-proxy-commands-stop_balance_down-name'>Name</h3>
+
+<p><code>STOP_BALANCE_DOWN ()</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>OUTPUT</td>
+<td>INT</td>
+<td>Output Binding ID</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-proxy-commands-stop_balance_down-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='audio-video-switch-proxy-commands-stop_bass_down'>STOP_BASS_DOWN</h2>
+
+<p>Stop ramping bass </p>
+
+<h3 id='audio-video-switch-proxy-commands-stop_bass_down-name'>Name</h3>
+
+<p><code>STOP_BALANCE_UP ()</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>OUTPUT</td>
+<td>INT</td>
+<td>Output Binding ID</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-proxy-commands-stop_bass_down-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='audio-video-switch-proxy-commands-stop_bass_down'>STOP_BASS_DOWN</h2>
+
+<p>Stop ramping bass </p>
+
+<h3 id='audio-video-switch-proxy-commands-stop_bass_down-name'>Name</h3>
+
+<p><code>STOP_BASS_DOWN ()</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>OUTPUT</td>
+<td>INT</td>
+<td>Output Binding ID</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-proxy-commands-stop_bass_down-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='audio-video-switch-proxy-commands-stop_bass_up'>STOP_BASS_UP</h2>
+
+<p>Stop ramping bass </p>
+
+<h3 id='audio-video-switch-proxy-commands-stop_bass_up-name'>Name</h3>
+
+<p><code>STOP_BASS_UP ()</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>OUTPUT</td>
+<td>INT</td>
+<td>Output Binding ID</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-proxy-commands-stop_bass_up-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='audio-video-switch-proxy-commands-stop_treble_down'>STOP_TREBLE_DOWN</h2>
+
+<p>Stop ramping the treble down</p>
+
+<h3 id='audio-video-switch-proxy-commands-stop_treble_down-name'>Name</h3>
+
+<p><code>STOP_TREBLE_DOWN ()</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>OUTPUT</td>
+<td>INT</td>
+<td>Output Binding ID</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-proxy-commands-stop_treble_down-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='audio-video-switch-proxy-commands-stop_treble_up'>STOP_TREBLE_UP</h2>
+
+<p>Stop ramping the treble up.</p>
+
+<h3 id='audio-video-switch-proxy-commands-stop_treble_up-name'>Name</h3>
+
+<p><code>STOP_TREBLE_UP ()</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>OUTPUT</td>
+<td>INT</td>
+<td>Output Binding ID</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-proxy-commands-stop_treble_up-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+<h2 id='audio-video-switch-proxy-commands-stop_vol_down'>STOP_VOL_DOWN</h2>
+
+<p>Stop ramping the volume down</p>
+
+<h3 id='audio-video-switch-proxy-commands-stop_vol_down-name'>Name</h3>
+
+<p><code>STOP_VOL_DOWN ()</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>OUTPUT</td>
+<td>INT</td>
+<td>Output Binding ID</td>
+</tr>
+</tbody></table>
+
+<h3 id='audio-video-switch-proxy-commands-stop_vol_down-returns'>Returns</h3>
+
+<p><code>None</code></p>
+
+      </div>
+      <div class="dark-box">
+          <div class="lang-selector">
+                <a href="#" data-language-name="lua">lua</a>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>

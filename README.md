@@ -1,2 +1,3 @@
-# docs-driverworks-proxyprotocol-avswitch
- AV Switch proxy SDK documentation
+# Driverworks Proxy/Protocol Guide - avswitch
+
+AV Switch proxy SDK documentation
